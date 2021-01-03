@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GES_AUTO</string>
+    <string name="p_proofesor_fondo">P_profesor_fondo</string>
+    <string name="foto_profesor">Foto_profesor</string>
+    <string name="nombre_usuario">Nombre de Usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="dni">D.N.I. :</string>
+    <string name="escuela">Escuela de conductores :</string>
+    <string name="permisos">Permisos de Conducción :</string>
+    <string name="numero_de_autoescuela">Numero :</string>
+    <string name="seccion">Sección :</string>
+    <string name="inicio">Inicio Sesion</string>
+    <string name="logotipo">ges-auto</string>
+    <string name="acceso">ACCESO USUARIO</string>
+</resources>
