@@ -3,11 +3,29 @@ package com.example.ges_auto.modelo;
 import java.util.ArrayList;
 
 public class Profesor {
+    private  String id;
     private String dni;
     private String nombre;
     private String primer_apellido;
     private String segundo_apellido;
     private ArrayList permisos;
+    private  String pass;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
 
     public String getDni() {
         return dni;

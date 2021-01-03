@@ -13,16 +13,23 @@ import android.util.Pair;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.ges_auto.autentificacion.autentificar;
 import com.example.ges_auto.modelo.Profesor;
 import com.example.ges_auto.servicio.Cliente;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
+import com.jaredrummler.materialspinner.MaterialSpinner;
+import com.jaredrummler.materialspinner.MaterialSpinnerAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -32,12 +39,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    EditText textusuraio,textpass;
-    TextInputLayout impusuario, imppass;
+    EditText textpass, textusuarioDni;
+    TextInputLayout imppass;
     Button buinicio;
     LinearLayout inicioSesion;
     ImageView logo;
-    String usuario, pass , url;
+    String usuario, pass , url , dni;
+    ArrayList  profesoresArry = new ArrayList();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +56,16 @@ public class MainActivity extends AppCompatActivity {
 
         logo = findViewById(R.id.logo);
         inicioSesion = findViewById(R.id.linearLayout);
-
-        textusuraio =findViewById(R.id.edtUsuario);
+        
+        textusuarioDni = findViewById(R.id.etpdni);
         textpass =findViewById(R.id.etpContraseña);
 
-        impusuario =findViewById(R.id.impUsuario);
+
         imppass=findViewById(R.id.imppass);
 
         buinicio=findViewById(R.id.btAcceso);
+
+
 
         // retrofit para el json consumo api
         url= "https://auto-ges-api.herokuapp.com";
@@ -65,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Profesor>> call, Response<List<Profesor>> response) {
                 for( int i=0; i<response.body().size(); i++){
                     Profesor prof = response.body().get(i);
-                    Log.d("TAG1","respueta "+i+" nombre "+prof.getNombre());
-                    Toast.makeText(MainActivity.this,prof.getNombre(),Toast.LENGTH_LONG).show();
+                    profesoresArry.add(prof);
+
 
                 }
             }
@@ -75,22 +87,24 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call<List<Profesor>> call, Throwable t) {
                     Log.d("tag1", "error "+ t.getMessage().toString());
             }
-        });
 
+
+
+        });
 
 
         buinicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                usuario= textusuraio.getText().toString();
+                dni = textusuarioDni.getText().toString();
                 pass = textpass.getText().toString();
 
-                if(usuario.length()== 0 || pass.length()== 0){
+                autentificar auten= new autentificar(dni,profesoresArry,pass);
+
+
+                if(textusuarioDni.length()== 0 || pass.length()== 0){
                     Toast.makeText(MainActivity.this,"usuario o contraseña vacios",Toast.LENGTH_LONG).show();
 
-                }else {
-
-                    Toast.makeText(MainActivity.this,usuario+": "+pass,Toast.LENGTH_LONG).show();
                 }
 
 

@@ -43,21 +43,21 @@
             android:textAlignment="center"
             android:textSize="24sp" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/impUsuario"
+            android:id="@+id/edtusuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/edtUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginRight="15dp"
-            android:ems="10"
-            android:hint="@string/nombre_usuario"
-            android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/etpdni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:hint="@string/Dni"
+                android:inputType="textWebEditText" />
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/imppass"

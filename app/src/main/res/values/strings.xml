@@ -12,4 +12,5 @@
     <string name="inicio">Inicio Sesion</string>
     <string name="logotipo">ges-auto</string>
     <string name="acceso">ACCESO USUARIO</string>
+    <string name="Dni">D.N.I. USUARIO</string>
 </resources>
