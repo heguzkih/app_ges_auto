@@ -1,8 +1,9 @@
 package com.example.ges_auto.modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Profesor {
+public class Profesor implements Serializable {
     private  String id;
     private String dni;
     private String nombre;

@@ -1,5 +1,6 @@
 package com.example.ges_auto.servicio;
 
+import com.example.ges_auto.modelo.Practica;
 import com.example.ges_auto.modelo.Profesor;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface Cliente {
 
     @GET ("/profesor")
     Call<List<Profesor>> getReposUser();
+
 }

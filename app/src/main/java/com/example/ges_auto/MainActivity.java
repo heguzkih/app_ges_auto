@@ -7,6 +7,7 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Parcelable;
 import android.text.Layout;
 import android.util.Log;
 import android.util.Pair;
@@ -29,6 +30,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.jaredrummler.materialspinner.MaterialSpinnerAdapter;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -101,10 +103,21 @@ public class MainActivity extends AppCompatActivity {
 
                 autentificar auten= new autentificar(dni,profesoresArry,pass);
 
-
                 if(textusuarioDni.length()== 0 || pass.length()== 0){
                     Toast.makeText(MainActivity.this,"usuario o contraseña vacios",Toast.LENGTH_LONG).show();
 
+                }else if (auten.atentico()){
+
+                    Toast.makeText(MainActivity.this,"ok",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent (v.getContext(), InicioProfesor.class).putExtra("profesor", (Serializable) auten.getProfesprSeleccionado());
+                    //
+                    startActivityForResult(intent, 0);
+
+
+
+                }else{
+
+                    Toast.makeText(MainActivity.this," Usuario o contraseña erronia",Toast.LENGTH_LONG).show();
                 }
 
 
