@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="195dp"
-        android:layout_height="185dp"
-        android:layout_marginBottom="100dp"
+        android:layout_width="183dp"
+        android:layout_height="157dp"
+        android:layout_marginBottom="16dp"
         android:alpha="1"
         android:contentDescription="@string/logotipo"
         android:src="@drawable/g3313"
@@ -21,8 +21,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="345dp"
-        android:layout_height="398dp"
+        android:layout_width="343dp"
+        android:layout_height="534dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
@@ -42,12 +42,14 @@
             android:text="@string/acceso"
             android:textAlignment="center"
             android:textSize="24sp" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edtusuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <EditText
-                android:id="@+id/etpdni"
+                android:id="@+id/edtUrl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -55,6 +57,7 @@
                 android:layout_marginRight="15dp"
                 android:ems="10"
                 android:hint="@string/Dni"
+
                 android:inputType="textWebEditText" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,16 +66,19 @@
             android:id="@+id/imppass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/etpContraseña"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginRight="15dp"
-            android:ems="10"
-            android:hint="@string/contraseña"
-            android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/etpContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:hint="@string/contraseña"
+
+                android:inputType="textPassword" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -83,6 +89,15 @@
             android:layout_marginTop="60dp"
             android:layout_marginRight="15dp"
             android:text="@string/inicio" />
+
+        <Button
+            android:id="@+id/botonUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/Gestion_servidor" />
 
     </LinearLayout>
 

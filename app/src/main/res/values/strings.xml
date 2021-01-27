@@ -15,4 +15,8 @@
     <string name="logotipo">ges-auto</string>
     <string name="acceso">ACCESO USUARIO</string>
     <string name="Dni">D.N.I. USUARIO</string>
+    <string name="Servidor_url">Url del Servidor</string>
+    <string name="Gestion_servidor">Gestion del Servidor</string>
+    <string name="Guardar">Guardar</string>
+    <string name="salir">Salir</string>
 </resources>

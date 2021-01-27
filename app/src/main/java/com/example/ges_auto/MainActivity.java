@@ -2,52 +2,39 @@ package com.example.ges_auto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.app.ActivityOptions;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Parcelable;
-import android.text.Layout;
-import android.util.Log;
-import android.util.Pair;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.ges_auto.autentificacion.autentificar;
+
 import com.example.ges_auto.modelo.Profesor;
+import com.example.ges_auto.modelo.Token;
+import com.example.ges_auto.remoto.RetrofitCliente;
 import com.example.ges_auto.servicio.Cliente;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
-import com.jaredrummler.materialspinner.MaterialSpinner;
-import com.jaredrummler.materialspinner.MaterialSpinnerAdapter;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
+import preferencias.GestorPreferencia;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     EditText textpass, textusuarioDni;
     TextInputLayout imppass;
-    Button buinicio;
+    Button buinicio, botonurl;
     LinearLayout inicioSesion;
     ImageView logo;
-    String usuario, pass , url , dni;
-    ArrayList  profesoresArry = new ArrayList();
+    String usuario, pass , url , dni , token ;
+    Profesor profesor;
+
 
 
 
@@ -59,68 +46,70 @@ public class MainActivity extends AppCompatActivity {
         logo = findViewById(R.id.logo);
         inicioSesion = findViewById(R.id.linearLayout);
         
-        textusuarioDni = findViewById(R.id.etpdni);
+        textusuarioDni = findViewById(R.id.edtUrl);
         textpass =findViewById(R.id.etpContraseña);
 
 
         imppass=findViewById(R.id.imppass);
 
         buinicio=findViewById(R.id.btAcceso);
+        botonurl=findViewById(R.id.botonUrl);
 
-
+        profesor = new Profesor();
 
         // retrofit para el json consumo api
-        url= "https://auto-ges-api.herokuapp.com";
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(url).addConverterFactory(GsonConverterFactory.create()).build();
-        Cliente cliente = retrofit.create(Cliente.class);
-        Call<List<Profesor>> call =cliente.getReposUser(); // hilo secundario
-        call.enqueue(new Callback<List<Profesor>>() {
-            @Override
-            public void onResponse(Call<List<Profesor>> call, Response<List<Profesor>> response) {
-                for( int i=0; i<response.body().size(); i++){
-                    Profesor prof = response.body().get(i);
-                    profesoresArry.add(prof);
-
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Profesor>> call, Throwable t) {
-                    Log.d("tag1", "error "+ t.getMessage().toString());
-            }
-
-
-
-        });
-
 
         buinicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dni = textusuarioDni.getText().toString();
-                pass = textpass.getText().toString();
-
-                autentificar auten= new autentificar(dni,profesoresArry,pass);
-
-                if(textusuarioDni.length()== 0 || pass.length()== 0){
-                    Toast.makeText(MainActivity.this,"usuario o contraseña vacios",Toast.LENGTH_LONG).show();
-
-                }else if (auten.atentico()){
-
-                    Toast.makeText(MainActivity.this,"ok",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent (v.getContext(), InicioProfesor.class).putExtra("profesor", (Serializable) auten.getProfesprSeleccionado());
-                    //
-                    startActivityForResult(intent, 0);
 
 
+                Toast.makeText(getApplicationContext(),GestorPreferencia.getInstance(getApplicationContext()).getServidor(),Toast.LENGTH_LONG).show();
+                dni =textusuarioDni.getText().toString().trim();
 
-                }else{
+                Profesor prof = new Profesor();
+                prof.setDni(dni);
+                prof.setPass(textpass.getText().toString().trim());
 
-                    Toast.makeText(MainActivity.this," Usuario o contraseña erronia",Toast.LENGTH_LONG).show();
-                }
+                Call <Token> call = RetrofitCliente.getInstance()
+                                    .createService(Cliente.class).loguin(prof);
+                call.enqueue(new Callback<Token>() {
+                    @Override
+                    public void onResponse(Call<Token> call, Response<Token> response) {
+
+                        Token tock = response.body();
+
+                        if(response.code()==200){
+
+                            GestorPreferencia.getInstance(getApplicationContext()).saveToken(tock);
+                            Intent intent = new Intent(getApplicationContext(),InicioProfesor.class);
+                            intent.putExtra("dni", dni);
+                            startActivity(intent);
+
+                        }else{
+
+                            Toast.makeText(getApplicationContext(),"Error en Usuario o contraseña",Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<Token> call, Throwable t) {
+                        Toast.makeText(getApplicationContext(),"Error en la conexion",Toast.LENGTH_LONG).show();
+
+                    }
+                });
 
 
+
+            }
+        });
+
+        botonurl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),ServidorPreferncia.class);
+                startActivity(intent);
             }
         });
 
@@ -130,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         inicioSesion.setAnimation(animacionLayaut);
 
     }
+
 
 
 }
