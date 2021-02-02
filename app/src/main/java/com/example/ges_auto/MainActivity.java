@@ -2,7 +2,6 @@ package com.example.ges_auto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,10 +20,12 @@ import com.example.ges_auto.remoto.RetrofitCliente;
 import com.example.ges_auto.servicio.Cliente;
 import com.google.android.material.textfield.TextInputLayout;
 
-import preferencias.GestorPreferencia;
+import preferencias.MisPreferencias;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static preferencias.MisPreferencias.SHARED_PREFERENCES;
 
 public class MainActivity extends AppCompatActivity {
     EditText textpass, textusuarioDni;
@@ -33,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout inicioSesion;
     ImageView logo;
     String usuario, pass , url , dni , token ;
+    RetrofitCliente retrofitCliente;
     Profesor profesor;
-
+    private MisPreferencias misPreferencias;
 
 
 
@@ -42,36 +44,42 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         logo = findViewById(R.id.logo);
         inicioSesion = findViewById(R.id.linearLayout);
-        
         textusuarioDni = findViewById(R.id.edtUrl);
         textpass =findViewById(R.id.etpContraseña);
-
-
         imppass=findViewById(R.id.imppass);
-
         buinicio=findViewById(R.id.btAcceso);
         botonurl=findViewById(R.id.botonUrl);
-
         profesor = new Profesor();
 
+        misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
+
         // retrofit para el json consumo api
+
+        if (misPreferencias.getServidor() ==null){
+
+            Intent intent = new Intent(getApplicationContext(),ServidorPreferncia.class);
+            startActivity(intent);
+        }
+
 
         buinicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                Toast.makeText(getApplicationContext(),misPreferencias.getServidor(),Toast.LENGTH_LONG).show();
 
-                Toast.makeText(getApplicationContext(),GestorPreferencia.getInstance(getApplicationContext()).getServidor(),Toast.LENGTH_LONG).show();
+                RetrofitCliente.setBaseUrl(misPreferencias.getServidor());
+
                 dni =textusuarioDni.getText().toString().trim();
 
                 Profesor prof = new Profesor();
                 prof.setDni(dni);
                 prof.setPass(textpass.getText().toString().trim());
 
-                Call <Token> call = RetrofitCliente.getInstance()
+
+                Call <Token> call = RetrofitCliente.getInstance(getApplicationContext())
                                     .createService(Cliente.class).loguin(prof);
                 call.enqueue(new Callback<Token>() {
                     @Override
@@ -81,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if(response.code()==200){
 
-                            GestorPreferencia.getInstance(getApplicationContext()).saveToken(tock);
+                            misPreferencias.saveToken(tock);
                             Intent intent = new Intent(getApplicationContext(),InicioProfesor.class);
                             intent.putExtra("dni", dni);
                             startActivity(intent);

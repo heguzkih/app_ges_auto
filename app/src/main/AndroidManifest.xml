@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GES_AUTO">
-        <activity android:name=".ServidorPreferncia"></activity>
+        <activity android:name=".Alumnos"></activity>
+        <activity android:name=".Profesores" />
+        <activity android:name=".ServidorPreferncia" />
         <activity android:name=".InicioProfesor" />
         <activity android:name=".MainActivity">
             <intent-filter>

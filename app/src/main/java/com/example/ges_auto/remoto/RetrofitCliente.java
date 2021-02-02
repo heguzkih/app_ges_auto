@@ -1,30 +1,34 @@
-package com.example.ges_auto.remoto;
+
+        package com.example.ges_auto.remoto;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
-import preferencias.GestorPreferencia;
+import preferencias.MisPreferencias;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static preferencias.MisPreferencias.SHARED_PREFERENCES;
+
 public class RetrofitCliente {
 
-    Context context = getActivity();
-
-    private Context getActivity() {
-        return context;
-    }
-
-    private  String BASE_URL = GestorPreferencia.getInstance(context).getServidor();
-
-
+    private static String BASE_URL;
     private  static HttpLoggingInterceptor loggingInterceptor;
     private OkHttpClient.Builder httpClientBuilder;
     private static Retrofit retrofit ;
     private   static  RetrofitCliente instance;
 
-    private  RetrofitCliente(){
+
+
+    public static void setBaseUrl(String baseUrl) {
+        BASE_URL = baseUrl;
+    }
+
+    private  RetrofitCliente(Context context){
+
+        Toast.makeText(context,""+ BASE_URL,Toast.LENGTH_LONG).show();
         httpClientBuilder = new  OkHttpClient.Builder();
         loggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
         httpClientBuilder = new OkHttpClient.Builder().addInterceptor(loggingInterceptor);
@@ -35,10 +39,12 @@ public class RetrofitCliente {
                 .build();
     }
 
-    public  static  synchronized  RetrofitCliente getInstance(){
-        if(instance == null){
-            instance = new RetrofitCliente();
-        }
+
+
+    public  static  synchronized  RetrofitCliente getInstance(Context context){
+
+            instance = new RetrofitCliente(context);
+
         return  instance;
     }
 

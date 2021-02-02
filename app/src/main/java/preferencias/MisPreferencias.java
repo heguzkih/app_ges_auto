@@ -2,25 +2,25 @@ package preferencias;
 import android.content.SharedPreferences;
 import com.example.ges_auto.modelo.Token;
 
-public class PreferenciasToken {
+public class MisPreferencias {
 
     public static  final String SHARED_PREFERENCES =  "SHARED_PREFERENCES";
     private static  final String SHARED_PREFERENCES_TOKEN =  "SHARED_PREFERENCES_TOKEN";
    private static  final String  SHARED_PREFERENCES_SERVIDOR= "SHARED_PREFERENCES_SERVIDOR";
-    private  static PreferenciasToken INSTANCE = null;
+    private  static MisPreferencias INSTANCE = null;
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
-    private PreferenciasToken(SharedPreferences sharedPreferences){
+    private MisPreferencias(SharedPreferences sharedPreferences){
         this.sharedPreferences=sharedPreferences;
         this.editor=sharedPreferences.edit();
     }
 
-    public static synchronized PreferenciasToken getInstance(SharedPreferences sharedPreferences){
+    public static synchronized MisPreferencias getInstance(SharedPreferences sharedPreferences){
 
         if (INSTANCE == null) {
-            INSTANCE = new PreferenciasToken(sharedPreferences);
+            INSTANCE = new MisPreferencias(sharedPreferences);
         }
         return  INSTANCE;
     }

@@ -2,21 +2,14 @@ package com.example.ges_auto.servicio;
 
 import com.example.ges_auto.modelo.Profesor;
 import com.example.ges_auto.modelo.Token;
-import com.google.gson.annotations.JsonAdapter;
 
 
-import java.util.List;
-
-import preferencias.GestorPreferencia;
 import retrofit2.Call;
 import retrofit2.http.Body;
 
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.HEAD;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
-import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 

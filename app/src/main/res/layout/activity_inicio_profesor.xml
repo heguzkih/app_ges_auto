@@ -116,13 +116,45 @@
             android:background="@drawable/redondeo"
             android:textSize="24sp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnProfesores"
+                android:layout_width="135.5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/redondeo"
+                android:fontFamily="@font/allerta"
+                android:text="@string/Profesores"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnAlumnos"
+                android:layout_width="135.5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/redondeo"
+                android:fontFamily="@font/allerta"
+                android:text="@string/Alumnos"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/p_profesor_fondo"
-        android:layout_width="360dp"
-        android:layout_height="322dp"
+        android:layout_width="340dp"
+        android:layout_height="312dp"
         android:contentDescription="@string/p_proofesor_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
