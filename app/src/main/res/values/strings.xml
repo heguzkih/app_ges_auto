@@ -20,5 +20,8 @@
     <string name="Guardar">Guardar</string>
     <string name="salir">Salir</string>
     <string name="Profesores">Profesores</string>
+    <string name="Profesor">Profesor</string>
     <string name="Alumnos">Alumnos</string>
+    <string name="Modificar">Modificar</string>
+    <string name="Eliminar">Eliminar</string>
 </resources>

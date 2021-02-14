@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Profesor implements Serializable {
-    private  String id;
+    private String id;
     private String dni;
     private String nombre;
     private String primer_apellido;

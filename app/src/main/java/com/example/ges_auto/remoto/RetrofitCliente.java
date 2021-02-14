@@ -28,7 +28,7 @@ public class RetrofitCliente {
 
     private  RetrofitCliente(Context context){
 
-        Toast.makeText(context,""+ BASE_URL,Toast.LENGTH_LONG).show();
+
         httpClientBuilder = new  OkHttpClient.Builder();
         loggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
         httpClientBuilder = new OkHttpClient.Builder().addInterceptor(loggingInterceptor);

@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         logo = findViewById(R.id.logo);
         inicioSesion = findViewById(R.id.linearLayout);
-        textusuarioDni = findViewById(R.id.edtUrl);
-        textpass =findViewById(R.id.etpContraseña);
+        textusuarioDni = findViewById(R.id.delNombre);
+        textpass =findViewById(R.id.UpdatePrimerApellido);
         imppass=findViewById(R.id.imppass);
-        buinicio=findViewById(R.id.btAcceso);
-        botonurl=findViewById(R.id.botonUrl);
+        buinicio=findViewById(R.id.btUpdatesalir);
+        botonurl=findViewById(R.id.botondeleter);
         profesor = new Profesor();
 
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(),misPreferencias.getServidor(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),misPreferencias.getServidor(),Toast.LENGTH_LONG).show();
 
                 RetrofitCliente.setBaseUrl(misPreferencias.getServidor());
 

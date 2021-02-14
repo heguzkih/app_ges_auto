@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,8 @@ public class InicioProfesor extends AppCompatActivity {
     Profesor profesor;
     String token, dni,url;
     Token tock;
+    Button profesores, alumnos;
+
     private MisPreferencias misPreferencias;
 
 
@@ -69,8 +73,45 @@ public class InicioProfesor extends AppCompatActivity {
         });
 
 
+        profesores = findViewById(R.id.btnProfesores);
+
+        profesores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Profesores.class);
+                startActivity(intent);
+            }
+        });
 
 
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Call<Profesor>  call =  RetrofitCliente.getInstance(getApplicationContext())
+                .createService(Cliente.class).verProfesor(dni,token);
+
+        call.enqueue(new Callback<Profesor>() {
+            @Override
+            public void onResponse(Call<Profesor> call, Response<Profesor> response) {
+
+                profesor= response.body();
+                txtNombre.setText( profesor.getNombre().toUpperCase());
+                txtPApellido.setText(profesor.getPrimer_apellido().toUpperCase());
+                txtSApellido.setText( profesor.getSegundo_apellido().toUpperCase());
+                txtPermisos.setText( profesor.getPermisos().toString().toUpperCase());
+
+
+            }
+
+            @Override
+            public void onFailure(Call<Profesor> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),"No se encuantran servidor ",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
