@@ -38,6 +38,18 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center_horizontal" >
+
+            <Switch
+                android:id="@+id/selector_root"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -199,10 +211,6 @@
 
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"/>
     </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

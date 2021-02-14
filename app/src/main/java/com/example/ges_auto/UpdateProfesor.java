@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.ges_auto.modelo.Profesor;
@@ -23,6 +24,7 @@ import static preferencias.MisPreferencias.SHARED_PREFERENCES;
 
 public class UpdateProfesor extends AppCompatActivity {
     EditText dniProfesor, nombreProfesor, apellidounoprofesor, apellidodosprofesor,passprofresor, permisosprofesor;
+    Switch root;
     Button modificar;
     Profesor profesor;
     private MisPreferencias misPreferencias;
@@ -41,6 +43,7 @@ public class UpdateProfesor extends AppCompatActivity {
         apellidodosprofesor = findViewById(R.id.delSegundoApellido);
         passprofresor = findViewById(R.id.updapass);
         permisosprofesor= findViewById(R.id.delepermisos);
+        root = findViewById(R.id.selector_root);
 
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
 
@@ -51,6 +54,7 @@ public class UpdateProfesor extends AppCompatActivity {
         apellidounoprofesor.setText(profesor.getPrimer_apellido());
         passprofresor.setText(profesor.getPass());
         permisosprofesor.setText(profesor.getPermisos().toString());
+        root.setChecked(profesor.isRoot());
 
         modificar= findViewById(R.id.botondeleter);
 
@@ -63,6 +67,7 @@ public class UpdateProfesor extends AppCompatActivity {
                profesor.setSegundo_apellido(apellidodosprofesor.getText().toString().trim());
                profesor.setDni(dniProfesor.getText().toString().trim());
                profesor.setPass(passprofresor.getText().toString().trim());
+               profesor.setRoot(root.getSplitTrack());
                 ArrayList<String> permisos = new ArrayList<String>();
                 String permisosModificado =   permisosprofesor.getText().toString().trim();
                 for (char per: permisosModificado.toCharArray()){

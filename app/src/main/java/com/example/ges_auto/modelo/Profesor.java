@@ -11,6 +11,15 @@ public class Profesor implements Serializable {
     private String segundo_apellido;
     private ArrayList permisos;
     private  String pass;
+    private  boolean root;
+
+    public boolean isRoot() {
+        return root;
+    }
+
+    public void setRoot(boolean root) {
+        this.root = root;
+    }
 
     public String getId() {
         return id;

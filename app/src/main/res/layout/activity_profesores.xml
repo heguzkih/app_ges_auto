@@ -9,8 +9,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="468dp"
-        android:layout_height="97dp"
+        android:layout_width="399dp"
+        android:layout_height="75dp"
         android:layout_marginTop="72dp"
         android:orientation="horizontal"
         android:paddingLeft="8dp"
@@ -24,23 +24,18 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_weight="1"
             android:paddingLeft="16dp"
             android:text="Button" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingRight="16dp"
-            android:text="Button" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
-        android:layout_width="367dp"
-        android:layout_height="647dp"
+        android:layout_width="365dp"
+        android:layout_height="553dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:foregroundGravity="center_horizontal"

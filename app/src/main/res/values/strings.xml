@@ -24,4 +24,5 @@
     <string name="Alumnos">Alumnos</string>
     <string name="Modificar">Modificar</string>
     <string name="Eliminar">Eliminar</string>
+    <string name="CrearProfesor">Crear Profesor</string>
 </resources>
