@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2E7AA4"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="149dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="371dp"
+            android:layout_height="148dp">
+
+            <TableRow
+                android:layout_width="320dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/texttitulalumno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="60dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/Alumno" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp">
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/nombre" />
+
+                <TextView
+                    android:id="@+id/textalumnombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textalumapellido"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|left"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/Dni" />
+
+                <TextView
+                    android:id="@+id/textalumdni"
+                    android:layout_width="81dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="TextView" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/buttonModificarAlumno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Modificar" />
+
+                <Button
+                    android:id="@+id/buttoneliminartargetAlumno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/Eliminar" />
+            </TableRow>
+
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
