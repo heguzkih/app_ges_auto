@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,11 +36,11 @@ public class deleteProfesor extends AppCompatActivity {
        if (extras !=null) profesor = (Profesor) extras.getSerializable("profesordel");
 
 
-       dniProfesor = findViewById(R.id.deldni);
-       nombreProfesor= findViewById(R.id.delNombre);
-        apellidounoprofesor= findViewById(R.id.delPrimerApellido);
-        apellidodosprofesor = findViewById(R.id.delSegundoApellido);
-        permisosprofesor= findViewById(R.id.delepermisos);
+       dniProfesor = findViewById(R.id.Createdni);
+       nombreProfesor= findViewById(R.id.CreateNombre);
+        apellidounoprofesor= findViewById(R.id.CreatePrimerApellido);
+        apellidodosprofesor = findViewById(R.id.CreateSegundoApellido);
+        permisosprofesor= findViewById(R.id.Createpermisos);
 
        misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
 
@@ -51,7 +50,7 @@ public class deleteProfesor extends AppCompatActivity {
         apellidounoprofesor.setText(profesor.getPrimer_apellido());
         permisosprofesor.setText(profesor.getPermisos().toString());
 
-        eliminar = findViewById(R.id.botondeleter);
+        eliminar = findViewById(R.id.botonCreate);
 
         eliminar.setOnClickListener(new View.OnClickListener() {
             @Override

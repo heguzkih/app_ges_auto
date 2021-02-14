@@ -22,7 +22,7 @@
             android:gravity="center_horizontal">
 
             <TextView
-                android:id="@+id/textUpdateProfeosr"
+                android:id="@+id/textCreateProfeosr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -40,11 +40,11 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal" >
 
-            <Switch
-                android:id="@+id/selector_root"
+            <CheckBox
+                android:id="@+id/update_root"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Switch" />
+                android:text="@string/Root" />
         </TableRow>
 
         <TableRow
@@ -58,7 +58,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
-                    android:id="@+id/delNombre"
+                    android:id="@+id/CreateNombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -83,7 +83,7 @@
                 android:gravity="center_horizontal">
 
                 <EditText
-                    android:id="@+id/delPrimerApellido"
+                    android:id="@+id/CreatePrimerApellido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/delSegundoApellido"
+                    android:id="@+id/CreateSegundoApellido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/deldni"
+                    android:id="@+id/Createdni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -156,7 +156,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/delepermisos"
+                    android:id="@+id/Createpermisos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/updapass"
+                    android:id="@+id/Createdapass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -201,7 +201,7 @@
             android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/botondeleter"
+                android:id="@+id/botonCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"

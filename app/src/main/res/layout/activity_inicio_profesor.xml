@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDFFBE"
+    android:background="#2E7AA4"
     android:rotation="0"
     android:rotationX="0"
     android:rotationY="0"
@@ -43,7 +43,7 @@
             android:fontFamily="@font/allerta"
             android:text="@string/nombre"
             android:textAlignment="center"
-            android:background="@drawable/redondeo"
+
             android:textSize="24sp" />
 
         <TextView
@@ -67,7 +67,7 @@
             android:fontFamily="@font/allerta"
             android:text="@string/PrimerApellido"
             android:textAlignment="center"
-            android:background="@drawable/redondeo"
+
             android:textSize="24sp" />
         <TextView
             android:id="@+id/textsegundoapellidoetiqueta"
@@ -90,7 +90,7 @@
             android:fontFamily="@font/allerta"
             android:text="@string/SegundoApellido"
             android:textAlignment="center"
-            android:background="@drawable/redondeo"
+
             android:textSize="24sp" />
         <TextView
             android:id="@+id/textpermisosoetiqueta"
@@ -113,7 +113,7 @@
             android:fontFamily="@font/allerta"
             android:text="@string/permisos"
             android:textAlignment="center"
-            android:background="@drawable/redondeo"
+
             android:textSize="24sp" />
 
         <LinearLayout
@@ -128,7 +128,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30px"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/redondeo"
+
                 android:fontFamily="@font/allerta"
                 android:text="@string/Profesores"
                 android:textAlignment="center"
@@ -141,7 +141,6 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30px"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/redondeo"
                 android:fontFamily="@font/allerta"
                 android:text="@string/Alumnos"
                 android:textAlignment="center"

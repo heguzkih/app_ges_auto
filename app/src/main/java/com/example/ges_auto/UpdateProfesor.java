@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -24,7 +25,7 @@ import static preferencias.MisPreferencias.SHARED_PREFERENCES;
 
 public class UpdateProfesor extends AppCompatActivity {
     EditText dniProfesor, nombreProfesor, apellidounoprofesor, apellidodosprofesor,passprofresor, permisosprofesor;
-    Switch root;
+    CheckBox root;
     Button modificar;
     Profesor profesor;
     private MisPreferencias misPreferencias;
@@ -37,13 +38,13 @@ public class UpdateProfesor extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras !=null) profesor = (Profesor) extras.getSerializable("profesor");
 
-        dniProfesor = findViewById(R.id.deldni);
-        nombreProfesor= findViewById(R.id.delNombre);
-        apellidounoprofesor= findViewById(R.id.delPrimerApellido);
-        apellidodosprofesor = findViewById(R.id.delSegundoApellido);
-        passprofresor = findViewById(R.id.updapass);
-        permisosprofesor= findViewById(R.id.delepermisos);
-        root = findViewById(R.id.selector_root);
+        dniProfesor = findViewById(R.id.Createdni);
+        nombreProfesor= findViewById(R.id.CreateNombre);
+        apellidounoprofesor= findViewById(R.id.CreatePrimerApellido);
+        apellidodosprofesor = findViewById(R.id.CreateSegundoApellido);
+        passprofresor = findViewById(R.id.Createdapass);
+        permisosprofesor= findViewById(R.id.Createpermisos);
+        root = findViewById(R.id.update_root);
 
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
 
@@ -56,7 +57,7 @@ public class UpdateProfesor extends AppCompatActivity {
         permisosprofesor.setText(profesor.getPermisos().toString());
         root.setChecked(profesor.isRoot());
 
-        modificar= findViewById(R.id.botondeleter);
+        modificar= findViewById(R.id.botonCreate);
 
 
         modificar.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +68,13 @@ public class UpdateProfesor extends AppCompatActivity {
                profesor.setSegundo_apellido(apellidodosprofesor.getText().toString().trim());
                profesor.setDni(dniProfesor.getText().toString().trim());
                profesor.setPass(passprofresor.getText().toString().trim());
-               profesor.setRoot(root.getSplitTrack());
+
+               if(root.isChecked()){
+                   profesor.setRoot(true);
+               }else{
+                   profesor.setRoot(false);
+               }
+
                 ArrayList<String> permisos = new ArrayList<String>();
                 String permisosModificado =   permisosprofesor.getText().toString().trim();
                 for (char per: permisosModificado.toCharArray()){

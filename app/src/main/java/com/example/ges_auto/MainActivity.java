@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         logo = findViewById(R.id.logo);
         inicioSesion = findViewById(R.id.linearLayout);
-        textusuarioDni = findViewById(R.id.delNombre);
+        textusuarioDni = findViewById(R.id.CreateNombre);
         textpass =findViewById(R.id.UpdatePrimerApellido);
         imppass=findViewById(R.id.imppass);
         buinicio=findViewById(R.id.btUpdatesalir);
-        botonurl=findViewById(R.id.botondeleter);
+        botonurl=findViewById(R.id.botonCreate);
         profesor = new Profesor();
 
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));

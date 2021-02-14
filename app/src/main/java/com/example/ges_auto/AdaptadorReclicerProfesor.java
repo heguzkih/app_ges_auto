@@ -14,20 +14,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ges_auto.modelo.Profesor;
-import com.example.ges_auto.remoto.RetrofitCliente;
-import com.example.ges_auto.servicio.Cliente;
 
 import java.util.List;
 
 import preferencias.MisPreferencias;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-import static android.content.Context.MODE_PRIVATE;
-import static preferencias.MisPreferencias.SHARED_PREFERENCES;
-
-public class AdaptadorReclicer  extends RecyclerView.Adapter<AdaptadorReclicer.ViewHolderDatos>{
+public class AdaptadorReclicerProfesor extends RecyclerView.Adapter<AdaptadorReclicerProfesor.ViewHolderDatos>{
 
 
     List<Profesor> listDatos;
@@ -36,7 +28,7 @@ public class AdaptadorReclicer  extends RecyclerView.Adapter<AdaptadorReclicer.V
     private MisPreferencias misPreferencias;
 
 
-    public AdaptadorReclicer(List<Profesor> listDatos) {
+    public AdaptadorReclicerProfesor(List<Profesor> listDatos) {
         this.listDatos = listDatos;
     }
 

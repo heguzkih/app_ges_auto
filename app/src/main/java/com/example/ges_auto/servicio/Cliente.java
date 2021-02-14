@@ -1,5 +1,6 @@
 package com.example.ges_auto.servicio;
 
+import com.example.ges_auto.modelo.Alumno;
 import com.example.ges_auto.modelo.Profesor;
 import com.example.ges_auto.modelo.Token;
 
@@ -51,6 +52,26 @@ public interface Cliente {
     Call <Void>borrarProfesor(@Path("dni") String id,
                                   @Header("profesor-login") String tock);
 
+
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"})
+    @POST("/profesor")
+    Call <Void>crearProfesor( @Body Profesor profesor,
+                                  @Header("profesor-login") String tock);
+
+
+
+    @GET("/alumno")
+    Call <List<Alumno>> verTodosAlumnos(@Header("profesor-login") String tock);
+
+
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"})
+    @POST("/alumno")
+    Call <Void>crearAlumno( @Body Alumno alumno,
+                              @Header("profesor-login") String tock);
 
 
 

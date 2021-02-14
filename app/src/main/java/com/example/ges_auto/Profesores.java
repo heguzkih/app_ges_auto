@@ -1,11 +1,13 @@
 package com.example.ges_auto;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.ges_auto.modelo.Profesor;
@@ -29,6 +31,7 @@ public class Profesores extends AppCompatActivity {
     RecyclerView recyclerView;
     private MisPreferencias misPreferencias;
     Token tock;
+    Button crearProfesor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,22 @@ public class Profesores extends AppCompatActivity {
         listaDatos =new ArrayList<Profesor>();
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
         tock = misPreferencias.getToken();
+
+        crearProfesor= (Button) findViewById(R.id.buttonCrearProfesor);
+
+        crearProfesor.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(getApplicationContext(),"creart profe",Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(),CrearProfesor.class);
+
+                startActivity(intent);
+            }
+        });
+
 
         // llamada a retrofit
         RetrofitCliente.setBaseUrl(misPreferencias.getServidor());
@@ -57,7 +76,7 @@ public class Profesores extends AppCompatActivity {
                         
                         listaDatos = response.body();
 
-                        AdaptadorReclicer adapter= new AdaptadorReclicer(listaDatos);
+                        AdaptadorReclicerProfesor adapter= new AdaptadorReclicerProfesor(listaDatos);
                         recyclerView.setAdapter(adapter);
 
                 }
@@ -85,6 +104,22 @@ public class Profesores extends AppCompatActivity {
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
         tock = misPreferencias.getToken();
 
+
+        crearProfesor= (Button) findViewById(R.id.buttonCrearProfesor);
+
+        crearProfesor.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(getApplicationContext(),"creart profe",Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(),CrearProfesor.class);
+
+                startActivity(intent);
+            }
+        });
+
         // llamada a retrofit
         RetrofitCliente.setBaseUrl(misPreferencias.getServidor());
 
@@ -100,7 +135,7 @@ public class Profesores extends AppCompatActivity {
 
                     listaDatos = response.body();
 
-                    AdaptadorReclicer adapter= new AdaptadorReclicer(listaDatos);
+                    AdaptadorReclicerProfesor adapter= new AdaptadorReclicerProfesor(listaDatos);
                     recyclerView.setAdapter(adapter);
 
                 }

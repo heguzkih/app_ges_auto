@@ -63,6 +63,14 @@ public class InicioProfesor extends AppCompatActivity {
                 txtSApellido.setText( profesor.getSegundo_apellido().toUpperCase());
                 txtPermisos.setText( profesor.getPermisos().toString().toUpperCase());
 
+                if(profesor.isRoot()){
+
+                    profesores.setVisibility(View.VISIBLE);
+                }else{
+
+                    profesores.setVisibility(View.GONE);
+                }
+
 
             }
 
@@ -75,6 +83,7 @@ public class InicioProfesor extends AppCompatActivity {
 
         profesores = findViewById(R.id.btnProfesores);
 
+
         profesores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +93,14 @@ public class InicioProfesor extends AppCompatActivity {
         });
 
 
-
+        alumnos = findViewById(R.id.btnAlumnos);
+        alumnos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(getApplicationContext(),Alumnos.class);
+                startActivity(intent1);
+            }
+        });
 
     }
 

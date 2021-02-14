@@ -26,7 +26,7 @@
             android:gravity="center_horizontal">
 
             <TextView
-                android:id="@+id/textUpdateProfeosr"
+                android:id="@+id/textCreateProfeosr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -50,7 +50,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/delNombre"
+                    android:id="@+id/CreateNombre"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
@@ -75,7 +75,7 @@
                 android:gravity="center_horizontal">
 
                 <TextView
-                    android:id="@+id/delPrimerApellido"
+                    android:id="@+id/CreatePrimerApellido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/delSegundoApellido"
+                    android:id="@+id/CreateSegundoApellido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/deldni"
+                    android:id="@+id/Createdni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/delepermisos"
+                    android:id="@+id/Createpermisos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -180,7 +180,7 @@
             android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/botondeleter"
+                android:id="@+id/botonCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"

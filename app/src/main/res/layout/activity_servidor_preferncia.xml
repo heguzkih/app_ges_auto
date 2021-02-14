@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textUpdateProfeosr"
+        android:id="@+id/textCreateProfeosr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -29,7 +29,7 @@
         android:layout_marginTop="116dp"
         android:text="@string/Guardar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/delNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/CreateNombre" />
 
     <Button
         android:id="@+id/botonSalir"
@@ -40,10 +40,10 @@
         android:text="@string/salir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonGuardar"
-        app:layout_constraintTop_toBottomOf="@+id/delNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/CreateNombre" />
 
     <EditText
-        android:id="@+id/delNombre"
+        android:id="@+id/CreateNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -52,5 +52,5 @@
         android:hint="@string/Servidor_url"
         android:inputType="textWebEditText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUpdateProfeosr" />
+        app:layout_constraintTop_toBottomOf="@+id/textCreateProfeosr" />
 </androidx.constraintlayout.widget.ConstraintLayout>

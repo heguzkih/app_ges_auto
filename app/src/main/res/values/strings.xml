@@ -14,7 +14,7 @@
     <string name="inicio">Inicio Sesion</string>
     <string name="logotipo">ges-auto</string>
     <string name="acceso">ACCESO USUARIO</string>
-    <string name="Dni">D.N.I. USUARIO</string>
+    <string name="Dni">D.N.I.</string>
     <string name="Servidor_url">Url del Servidor</string>
     <string name="Gestion_servidor">Gestion del Servidor</string>
     <string name="Guardar">Guardar</string>
@@ -25,4 +25,16 @@
     <string name="Modificar">Modificar</string>
     <string name="Eliminar">Eliminar</string>
     <string name="CrearProfesor">Crear Profesor</string>
+    <string name="Root">Administrador</string>
+    <string name="Alumno">Alumno</string>
+    <string name="CrearAlumno">Crear Alumno</string>
+    <string name="Lentes">Lentes</string>
+    <string name="condicionesres">C.R.</string>
+    <string name="validez">V.L.</string>
+    <string name="nacionalidad" >Nacionalidad</string>
+    <string name="lugarnaci" >Lugar Ncaimiento</string>
+    <string name="centrorec" >Centro Reconocimiento</string>
+    <string name="sexo" >Sexo</string>
+    <string name="fechadenacimiento" >Fecha de Nacimiento</string>
+
 </resources>

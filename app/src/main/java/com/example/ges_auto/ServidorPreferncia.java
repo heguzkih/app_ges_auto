@@ -25,7 +25,7 @@ public class ServidorPreferncia extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servidor_preferncia);
 
-        servidorUrl = findViewById(R.id.delNombre);
+        servidorUrl = findViewById(R.id.CreateNombre);
         guardar = findViewById(R.id.botonGuardar);
         salir = findViewById(R.id.botonSalir);
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));

@@ -6,4 +6,345 @@
     android:layout_height="match_parent"
     tools:context=".CrearAlumno">
 
+
+    <ScrollView
+        android:layout_width="412dp"
+        android:layout_height="615dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/botonCreateAlumno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/CrearAlumno" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/textCreateAlumno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30px"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/allerta"
+                    android:text="@string/Alumno"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxVlimitada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/validez" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxConRestric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/condicionesres" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxLentes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/Lentes" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtnombre"
+                    android:layout_width="286dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/CreateNombreAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/nombre"
+
+                        android:inputType="textWebEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/primerapellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <EditText
+                        android:id="@+id/CreatePrimerApellidoAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/PrimerApellido"
+
+                        android:inputType="textWebEditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/segapellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/CreateSegundoApellidoAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/SegundoApellido"
+
+                        android:inputType="textWebEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtdni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/CreatedniAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/Dni"
+                        android:inputType="textWebEditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtpermisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/CreatepermisosAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/permisos"
+
+                        android:inputType="textWebEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edsexo"
+                    android:layout_width="286dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/CreatesexoAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/sexo"
+
+                        android:inputType="textWebEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edcentroRecon"
+                    android:layout_width="286dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/Createcentrorec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/centrorec"
+
+                        android:inputType="textWebEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtluhgarnaci"
+                    android:layout_width="286dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/CreatelugarnaciAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/lugarnaci"
+
+                        android:inputType="textWebEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtnacionalidad"
+                    android:layout_width="286dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/CreatenacionalidadAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/nacionalidad"
+
+                        android:inputType="textWebEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtfechanacimiento"
+                    android:layout_width="286dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/editTextDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:inputType="date"
+                        android:hint="@string/fechadenacimiento"
+                        tools:text="@tools:sample/date/ddmmyy" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </TableLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
