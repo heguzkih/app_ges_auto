@@ -61,10 +61,12 @@ public interface Cliente {
                                   @Header("profesor-login") String tock);
 
 
+    /*
+    peticiones alumnos
+     */
 
     @GET("/alumno")
     Call <List<Alumno>> verTodosAlumnos(@Header("profesor-login") String tock);
-
 
     @Headers({
             "Accept: application/json",
@@ -72,6 +74,22 @@ public interface Cliente {
     @POST("/alumno")
     Call <Void>crearAlumno( @Body Alumno alumno,
                               @Header("profesor-login") String tock);
+
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"})
+    @PUT("/alumno/{dni}")
+    Call <Void>modificaAlumno(@Path("dni") String id, @Body Alumno alumno,
+                            @Header("profesor-login") String tock);
+
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"})
+    @DELETE("/alumno/{ID}")
+    Call <Void>borrarAlumno(@Path("id") String id,
+                              @Header("profesor-login") String tock);
+
+
 
 
 

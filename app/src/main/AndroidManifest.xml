@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GES_AUTO">
-        <activity android:name=".CrearAlumno"></activity>
+        <activity android:name=".deleteAlumno"></activity>
+        <activity android:name=".updateAlumno" />
+        <activity android:name=".CrearAlumno" />
         <activity android:name=".CrearProfesor" />
         <activity android:name=".deleteProfesor" />
         <activity android:name=".UpdateProfesor" />

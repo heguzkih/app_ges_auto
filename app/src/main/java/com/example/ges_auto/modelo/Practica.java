@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Practica {
+public class Practica implements Serializable {
 
 
         @SerializedName("_id")

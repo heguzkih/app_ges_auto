@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E7AA4"
     tools:context=".CrearAlumno">
 
 
     <ScrollView
-        android:layout_width="412dp"
-        android:layout_height="615dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/scrollView2"
+        android:layout_width="397dp"
+        android:layout_height="457dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,22 +21,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp">
 
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal">
-
-                <Button
-                    android:id="@+id/botonCreateAlumno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:text="@string/CrearAlumno" />
-
-            </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
@@ -320,6 +305,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal">
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edtfechanacimiento"
                     android:layout_width="286dp"
@@ -333,18 +319,47 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="5dp"
                         android:ems="8"
-                        android:inputType="date"
                         android:hint="@string/fechadenacimiento"
+                        android:inputType="date"
                         tools:text="@tools:sample/date/ddmmyy" />
                 </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtdireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
+                    <EditText
+                        android:id="@+id/CreadireccionAlumno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:ems="8"
+                        android:hint="@string/direccion"
+                        android:inputType="textWebEditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
         </TableLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/botonCreateAlumno"
+        android:layout_width="271dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/CrearAlumno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

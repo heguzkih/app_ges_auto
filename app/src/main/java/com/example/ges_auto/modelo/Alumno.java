@@ -3,10 +3,11 @@ package com.example.ges_auto.modelo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Alumno {
+public class Alumno implements Serializable {
 
 
     @SerializedName("_id")
@@ -25,7 +26,7 @@ public class Alumno {
     private boolean  condiciones_restrictivas;
     private boolean validez_limitada;
     private String  permiso_que_solicita;
-    private ArrayList <String> direccion;
+    private String direccion;
 
     public String getId() {
         return id;
@@ -139,11 +140,11 @@ public class Alumno {
         this.permiso_que_solicita = permiso_que_solicita;
     }
 
-    public ArrayList <String> getDireccion() {
+    public String getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(ArrayList <String> direccion) {
+    public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 }

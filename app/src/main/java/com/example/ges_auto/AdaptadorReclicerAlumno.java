@@ -2,10 +2,13 @@ package com.example.ges_auto;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +25,7 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
     List<Alumno> listDatos;
     Button modificar , eliminar;
     Context context;
+    TextView nombreAlmno, apellidoAlmno, dniAlmno;
     private MisPreferencias misPreferencias;
 
 
@@ -55,10 +59,14 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
 
         public ViewHolderDatos(@NonNull View itemView) {
             super(itemView);
-            context = itemView.getContext();
 
-           // modificar = (Button) itemView.findViewById(R.id.buttonModificarAlumno);
-           // eliminar = (Button) itemView.findViewById(R.id.buttoneliminartargetAlumno);
+            context = itemView.getContext();
+            nombreAlmno = (TextView) itemView.findViewById(R.id.textalumnombre);
+            dniAlmno = (TextView) itemView.findViewById(R.id.textalumdni);
+            apellidoAlmno = (TextView) itemView.findViewById(R.id.textalumapellido);
+
+           modificar = (Button) itemView.findViewById(R.id.buttonModificarAlumno);
+           eliminar = (Button) itemView.findViewById(R.id.buttoneliminartargetAlumno);
 
 
 
@@ -66,8 +74,16 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
 
         public void asignarDatos(Alumno alumno) {
 
+            nombreAlmno.setText(alumno.getNombre());
+            dniAlmno.setText(alumno.getDni());
+            apellidoAlmno.setText(alumno.getPrimer_apellido()+" "+alumno.getSegundo_apellido());
 
-          /*  modificar.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+           modificar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(v.getContext(),"modificar",Toast.LENGTH_LONG).show();
@@ -86,7 +102,7 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
                     intent.putExtra("alumnodel",alumno);
                     context.startActivities(new Intent[]{intent});
                 }
-            });*/
+            });
         }
     }
 }
