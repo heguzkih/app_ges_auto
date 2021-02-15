@@ -1,9 +1,15 @@
 package com.example.ges_auto.modelo;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Profesor implements Serializable {
+
+    @SerializedName("_id")
+    @Expose
     private String id;
     private String dni;
     private String nombre;
