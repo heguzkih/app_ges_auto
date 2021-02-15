@@ -14,9 +14,17 @@ public class Practica implements Serializable {
         private String id;
         private Profesor profesor;
         private Alumno alumno;
-        private Date fecha;
+        private Date fechaInicio;
         private String permiso;
+        private  Date fechaFin;
 
+    public Date getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
+    }
 
     public String getId() {
         return id;
@@ -42,12 +50,12 @@ public class Practica implements Serializable {
         this.alumno = alumno;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public Date getFechaInicio() {
+        return fechaInicio;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
     }
 
     public String getPermiso() {

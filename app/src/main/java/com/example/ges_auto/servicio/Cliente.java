@@ -1,6 +1,7 @@
 package com.example.ges_auto.servicio;
 
 import com.example.ges_auto.modelo.Alumno;
+import com.example.ges_auto.modelo.Practica;
 import com.example.ges_auto.modelo.Profesor;
 import com.example.ges_auto.modelo.Token;
 
@@ -85,11 +86,17 @@ public interface Cliente {
     @Headers({
             "Accept: application/json",
             "Content-Type: application/json"})
-    @DELETE("/alumno/{ID}")
+    @DELETE("/alumno/{id}")
     Call <Void>borrarAlumno(@Path("id") String id,
                               @Header("profesor-login") String tock);
 
 
+    /*
+    practicas
+     */
+
+    @GET("/practia")
+    Call <List<Practica>> verTodasPracticas (@Header("profesor-login") String tock);
 
 
 

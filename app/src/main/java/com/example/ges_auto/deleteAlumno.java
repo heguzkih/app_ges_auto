@@ -26,7 +26,7 @@ import retrofit2.Response;
 import static preferencias.MisPreferencias.SHARED_PREFERENCES;
 
 public class deleteAlumno extends AppCompatActivity {
-    TextView dni,nombre,primer_apellido,segundo_apellido,centro_reconocimiento,
+    TextView dni,nombre,primer_apellido,segundo_apellido,
             sexo,permiso_que_solicita;
 
     Button borrarAlumno;
@@ -40,6 +40,8 @@ public class deleteAlumno extends AppCompatActivity {
         setContentView(R.layout.activity_delete_alumno);
         Bundle extras = getIntent().getExtras();
         if (extras !=null) alumno = (Alumno) extras.getSerializable("alumnodel");
+
+        Toast.makeText(getApplicationContext(), alumno.getId(), Toast.LENGTH_LONG).show();
 
         dni = findViewById(R.id.DeletedniAlumno);
         nombre = findViewById(R.id.DeleteNombreAlumno);

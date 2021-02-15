@@ -25,9 +25,9 @@ public class InicioProfesor extends AppCompatActivity {
 
     TextView txtNombre,txtPApellido,txtSApellido,txtPermisos;
     Profesor profesor;
-    String token, dni,url;
+    String token, dni;
     Token tock;
-    Button profesores, alumnos;
+    Button profesores, alumnos , practicas;
 
     private MisPreferencias misPreferencias;
 
@@ -99,6 +99,15 @@ public class InicioProfesor extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(getApplicationContext(),Alumnos.class);
                 startActivity(intent1);
+            }
+        });
+
+        practicas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Profesores.class);
+                intent.putExtra("profesor",profesor);
+                startActivity(intent);
             }
         });
 

@@ -6,4 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".Practicas">
 
+    <Button
+        android:id="@+id/buttonCrearpractica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:text="@string/Crearpractica"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerAlumno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerpractica"
+        android:layout_width="367dp"
+        android:layout_height="569dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:foregroundGravity="center_horizontal"
+        android:paddingLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
