@@ -50,7 +50,7 @@ public class deleteProfesor extends AppCompatActivity {
         apellidounoprofesor.setText(profesor.getPrimer_apellido());
         permisosprofesor.setText(profesor.getPermisos().toString());
 
-        eliminar = findViewById(R.id.botonCreate);
+        eliminar = findViewById(R.id.buttonCreatePractica);
 
         eliminar.setOnClickListener(new View.OnClickListener() {
             @Override

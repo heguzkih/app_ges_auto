@@ -74,4 +74,6 @@ public class Practica implements Serializable {
     public void setPermiso(String permiso) {
         this.permiso = permiso;
     }
+
+
 }

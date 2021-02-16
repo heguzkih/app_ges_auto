@@ -95,8 +95,17 @@ public interface Cliente {
     practicas
      */
 
-    @GET("/practia")
+    @GET("/practica")
     Call <List<Practica>> verTodasPracticas (@Header("profesor-login") String tock);
+
+
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"})
+    @POST("/practica")
+    Call <Void>crearPractica( @Body Practica practica,
+                            @Header("profesor-login") String tock);
+
 
 
 

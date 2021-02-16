@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GES_AUTO">
-        <activity android:name=".Practicas"></activity>
+        <activity android:name=".CrearPractica"></activity>
+        <activity android:name=".Practicas" />
         <activity android:name=".deleteAlumno" />
         <activity android:name=".updateAlumno" />
         <activity android:name=".CrearAlumno" />

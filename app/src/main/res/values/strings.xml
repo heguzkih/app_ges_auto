@@ -39,8 +39,11 @@
     <string name="direccion">Direccion</string>
     <string name="Practicas">Practicas</string>
     <string name="Crearpractica">Crear Practica</string>
-    <string name="Practica" >Practica</string>
-    <string name="Fecha" >Fecha</string>
-    <string name="ver" >Ver Completa</string>
+    <string name="Practica">Practica</string>
+    <string name="Fecha">Fecha</string>
+    <string name="ver">Ver Completa</string>
+    <string name="cmentarios">Comentario</string>
+    <string name="fechaInicio">Fecha Inicio  dd/mm/yyyy hh:mm</string>
+    <string name="fechaFin">Fecha Fin  dd/mm/yyyy hh:mm</string>
 
 </resources>

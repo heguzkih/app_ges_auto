@@ -42,7 +42,7 @@ public class CrearProfesor extends AppCompatActivity {
         root = findViewById(R.id.ch_selector_rootCreate);
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
         profesor = new Profesor();
-        modificar= findViewById(R.id.botonCreate);
+        modificar= findViewById(R.id.buttonCreatePractica);
         modificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

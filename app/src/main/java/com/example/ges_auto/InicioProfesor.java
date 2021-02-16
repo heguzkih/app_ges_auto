@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ges_auto.modelo.Practica;
 import com.example.ges_auto.modelo.Profesor;
 import com.example.ges_auto.modelo.Token;
 import com.example.ges_auto.remoto.RetrofitCliente;
@@ -106,7 +107,7 @@ public class InicioProfesor extends AppCompatActivity {
         practicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Profesores.class);
+                Intent intent = new Intent(getApplicationContext(), Practicas.class);
                 intent.putExtra("profesor",profesor);
                 startActivity(intent);
             }

@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.ges_auto.modelo.Profesor;
@@ -57,7 +56,7 @@ public class UpdateProfesor extends AppCompatActivity {
         permisosprofesor.setText(profesor.getPermisos().toString());
         root.setChecked(profesor.isRoot());
 
-        modificar= findViewById(R.id.botonCreate);
+        modificar= findViewById(R.id.buttonCreatePractica);
 
 
         modificar.setOnClickListener(new View.OnClickListener() {

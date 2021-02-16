@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         textpass =findViewById(R.id.UpdatePrimerApellido);
         imppass=findViewById(R.id.imppass);
         buinicio=findViewById(R.id.btUpdatesalir);
-        botonurl=findViewById(R.id.botonCreate);
+        botonurl=findViewById(R.id.buttonCreatePractica);
         profesor = new Profesor();
 
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));

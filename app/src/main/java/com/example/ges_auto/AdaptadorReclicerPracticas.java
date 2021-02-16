@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ges_auto.modelo.Practica;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class AdaptadorReclicerPracticas extends RecyclerView.Adapter<AdaptadorReclicerPracticas.ViewHolderDatos>{
@@ -69,11 +70,14 @@ public class AdaptadorReclicerPracticas extends RecyclerView.Adapter<AdaptadorRe
 
         public void asignarDatos(Practica practica) {
 
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy hh:mm");
+
             nombreAlumno.setText(practica.getAlumno().getNombre());
             premisosPractica.setText(practica.getPermiso());
             apellidoAlumno.setText(practica.getAlumno().getPrimer_apellido()+" "+practica.getAlumno().getSegundo_apellido());
             dnialumno.setText(practica.getAlumno().getDni());
-            fechaPractica.setText(practica.getFechaInicio().toString());
+
+            fechaPractica.setText(formatter.format(practica.getFechaInicio()));
 
             modificar.setOnClickListener(new View.OnClickListener() {
                 @Override
