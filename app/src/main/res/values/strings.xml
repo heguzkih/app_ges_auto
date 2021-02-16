@@ -39,5 +39,8 @@
     <string name="direccion">Direccion</string>
     <string name="Practicas">Practicas</string>
     <string name="Crearpractica">Crear Practica</string>
+    <string name="Practica" >Practica</string>
+    <string name="Fecha" >Fecha</string>
+    <string name="ver" >Ver Completa</string>
 
 </resources>

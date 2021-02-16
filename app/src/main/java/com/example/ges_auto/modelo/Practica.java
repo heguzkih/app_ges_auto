@@ -17,6 +17,15 @@ public class Practica implements Serializable {
         private Date fechaInicio;
         private String permiso;
         private  Date fechaFin;
+        private String comentario;
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
 
     public Date getFechaFin() {
         return fechaFin;

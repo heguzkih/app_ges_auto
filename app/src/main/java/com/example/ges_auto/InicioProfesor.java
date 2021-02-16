@@ -101,6 +101,7 @@ public class InicioProfesor extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        practicas =findViewById(R.id.buttonPracticas);
 
         practicas.setOnClickListener(new View.OnClickListener() {
             @Override
