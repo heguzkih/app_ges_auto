@@ -4,6 +4,161 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E7AA4"
     tools:context=".verCompletaPractica">
+
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="652dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textverPractica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/allerta"
+            android:text="@string/Practica"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/verPracticaNombreAlumnotitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:ems="8"
+            android:hint="@string/Alumno"
+
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/DverPracticaNombreAlumno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:ems="8"
+            android:hint="@string/nombre"
+
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/verePracticadniAlumno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:ems="8"
+            android:hint="@string/Dni"
+
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/DvPracticaNombreProfesorTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:ems="8"
+            android:hint="@string/Profesor"
+
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/veretePracticaNombreProfesor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:ems="8"
+            android:hint="@string/Profesor"
+
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/veretePracticadniprofesor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:ems="8"
+            android:hint="@string/Dni"
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/verPracticapermisosAlumno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:ems="8"
+            android:hint="@string/permisos"
+
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/verPracticafechaIicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:ems="8"
+            android:hint="@string/fechaInicio"
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/verPracticafechafin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:ems="8"
+            android:hint="@string/fechaFin"
+            android:inputType="textWebEditText" />
+
+        <TextView
+            android:id="@+id/rols"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/botoncalirver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/salir" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

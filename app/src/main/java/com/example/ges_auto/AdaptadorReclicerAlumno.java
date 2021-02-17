@@ -23,10 +23,12 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
 
 
     List<Alumno> listDatos;
-    Button modificar , eliminar;
+    Button modificar , eliminar, practicas;
     Context context;
     TextView nombreAlmno, apellidoAlmno, dniAlmno;
-    private MisPreferencias misPreferencias;
+
+
+
 
 
     public AdaptadorReclicerAlumno(List<Alumno> listDatos) {
@@ -67,6 +69,7 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
 
            modificar = (Button) itemView.findViewById(R.id.buttonModificarAlumno);
            eliminar = (Button) itemView.findViewById(R.id.buttoneliminartargetAlumno);
+           practicas = (Button) itemView.findViewById(R.id.buttonPracticas);
 
 
 
@@ -101,6 +104,17 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
                     Intent intent = new Intent(v.getContext(),deleteAlumno.class);
                     intent.putExtra("alumnodel",alumno);
                     context.startActivities(new Intent[]{intent});
+                }
+            });
+
+
+            practicas.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View vi) {
+                    Intent intent = new Intent(vi.getContext(),practicasdelAlumno.class);
+                    intent.putExtra("alumnopra",alumno);
+                    context.startActivities(new Intent[]{intent});
+
                 }
             });
         }

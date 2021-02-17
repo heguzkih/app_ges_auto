@@ -109,7 +109,7 @@ public class Practicas extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-
+        listaDatos =new ArrayList<Practica>();
         listaDatosProfesor =new ArrayList<Practica>();
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
         tock = misPreferencias.getToken();
@@ -122,13 +122,12 @@ public class Practicas extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Practica>> call, Response<List<Practica>> response) {
                 if(response.code()==200) {
-                    // Toast.makeText(getApplicationContext(), response.body().toString(), Toast.LENGTH_LONG).show();
 
 
                     listaDatos = response.body();
 
                     for(Practica p :listaDatos){
-                        Toast.makeText(getApplicationContext(), p.getProfesor().getNombre(), Toast.LENGTH_LONG).show();
+
                         if(p.getProfesor().getId().equals(profesor.getId())){
                             listaDatosProfesor.add(p);
                         }

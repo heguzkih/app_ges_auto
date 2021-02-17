@@ -61,6 +61,7 @@ public class deletePractica extends AppCompatActivity {
         fechaInicio.setText(formatter.format(practica.getFechaInicio()));
         fechaFin.setText(formatter.format(practica.getFechaFin()));
         permisoPractica.setText(practica.getPermiso());
+        dniProfesor.setText(practica.getProfesor().getDni());
 
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
 

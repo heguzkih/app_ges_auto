@@ -74,7 +74,7 @@
                     android:layout_marginRight="5dp"
                     android:ems="8"
                     android:hint="@string/fechaInicio"
-                    android:inputType="date"
+
                     />
 
 
@@ -102,7 +102,7 @@
                     android:layout_marginRight="5dp"
                     android:ems="8"
                     android:hint="@string/fechaFin"
-                    android:inputType="date"
+
                     />
 
             </com.google.android.material.textfield.TextInputLayout>

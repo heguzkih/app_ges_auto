@@ -34,7 +34,7 @@ public class UpdatePractica extends AppCompatActivity {
     EditText fechaInicio, permiso, fechaFin,comentario;
     Spinner alumnospiner, profesorspiner;
     Button updatePracticas;
-    Profesor profesor;
+
     private MisPreferencias misPreferencias;
     Practica practica;
     List<Alumno> listaralumnos;

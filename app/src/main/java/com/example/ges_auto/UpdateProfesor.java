@@ -52,7 +52,6 @@ public class UpdateProfesor extends AppCompatActivity {
         nombreProfesor.setText(profesor.getNombre());
         apellidodosprofesor.setText(profesor.getSegundo_apellido());
         apellidounoprofesor.setText(profesor.getPrimer_apellido());
-        passprofresor.setText(profesor.getPass());
         permisosprofesor.setText(profesor.getPermisos().toString());
         root.setChecked(profesor.isRoot());
 

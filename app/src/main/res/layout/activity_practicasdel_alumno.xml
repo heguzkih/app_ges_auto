@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".practicasdelAlumno">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recilcerviwerpracticaalumno"
+        android:layout_width="320dp"
+        android:layout_height="668dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

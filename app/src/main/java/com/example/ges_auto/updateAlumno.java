@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ges_auto.modelo.Alumno;
-import com.example.ges_auto.modelo.Profesor;
 import com.example.ges_auto.remoto.RetrofitCliente;
 import com.example.ges_auto.servicio.Cliente;
 
@@ -51,18 +50,19 @@ public class updateAlumno extends AppCompatActivity {
         sexo  = findViewById(R.id.UpdatesexoAlumno);
         lugar_nacimiento  = findViewById(R.id.UpdatelugarnaciAlumno);
         nacionalidad   = findViewById(R.id.UpdatenacionalidadAlumno);
-        permiso_que_solicita   = findViewById(R.id.UpdatepermisosAlumno);
+        permiso_que_solicita   = findViewById(R.id.UpdatepermisosAlumnouno);
         direccion   = findViewById(R.id.UpdatedireccionAlumno);
         lentes   = findViewById(R.id.UpdatecheckBoxLentes);
         condiciones_restrictivas   = findViewById(R.id.UpdatecheckBoxConRestric);
         validez_limitada   = findViewById(R.id.UpdatecheckBoxVlimitada);
 
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
         dni.setText(alumno.getDni());
         nombre.setText(alumno.getNombre());
         primer_apellido.setText(alumno.getPrimer_apellido());
         segundo_apellido.setText(alumno.getSegundo_apellido());
-        fecha_nacimiento.setText(alumno.getFecha_nacimiento().toString());
+        fecha_nacimiento.setText(formatter.format(alumno.getFecha_nacimiento()));
         centro_reconocimiento.setText(alumno.getCentro_reconocimiento());
         sexo.setText(alumno.getSexo());
         lugar_nacimiento.setText(alumno.getLugar_nacimiento());
@@ -75,7 +75,7 @@ public class updateAlumno extends AppCompatActivity {
 
         modificarAlumno = findViewById(R.id.botonUpdateAlumno12);
 
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+
 
         modificarAlumno.setOnClickListener(new View.OnClickListener() {
             @Override
