@@ -83,7 +83,7 @@ public class AdaptadorReclicerPracticas extends RecyclerView.Adapter<AdaptadorRe
                 @Override
                 public void onClick(View v) {
 
-                    Intent intent = new Intent(v.getContext(),UpdateProfesor.class);
+                    Intent intent = new Intent(v.getContext(),UpdatePractica.class);
                     intent.putExtra("practica",practica);
                     context.startActivities(new Intent[]{intent});
                 }
@@ -94,7 +94,7 @@ public class AdaptadorReclicerPracticas extends RecyclerView.Adapter<AdaptadorRe
                 public void onClick(View v) {
 
 
-                    Intent intent = new Intent(v.getContext(),deleteProfesor.class);
+                    Intent intent = new Intent(v.getContext(),deletePractica.class);
                     intent.putExtra("practicadel",practica);
                     context.startActivities(new Intent[]{intent});
                 }

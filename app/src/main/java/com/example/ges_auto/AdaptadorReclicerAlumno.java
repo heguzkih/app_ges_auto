@@ -86,7 +86,7 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
            modificar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(v.getContext(),"modificar",Toast.LENGTH_LONG).show();
+
                     Intent intent = new Intent(v.getContext(),updateAlumno.class);
                     intent.putExtra("alumno",alumno);
                     context.startActivities(new Intent[]{intent});
@@ -97,7 +97,7 @@ public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorRecli
                 @Override
                 public void onClick(View v) {
 
-                    Toast.makeText(v.getContext(),"eliminar",Toast.LENGTH_LONG).show();
+
                     Intent intent = new Intent(v.getContext(),deleteAlumno.class);
                     intent.putExtra("alumnodel",alumno);
                     context.startActivities(new Intent[]{intent});

@@ -82,4 +82,11 @@ public class Profesor implements Serializable {
     public void setPermisos(ArrayList permisos) {
         this.permisos = permisos;
     }
+
+    @Override
+    public String toString() {
+        return
+                "Profesor '" + dni + ' '
+                        + nombre + " " +primer_apellido;
+    }
 }

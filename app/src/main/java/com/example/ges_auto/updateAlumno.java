@@ -73,7 +73,7 @@ public class updateAlumno extends AppCompatActivity {
         if (alumno.isCondiciones_restrictivas())condiciones_restrictivas.isChecked();
         if(alumno.isValidez_limitada()) validez_limitada.isChecked();
 
-        modificarAlumno = findViewById(R.id.botonCreateAlumno);
+        modificarAlumno = findViewById(R.id.botonUpdateAlumno12);
 
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 

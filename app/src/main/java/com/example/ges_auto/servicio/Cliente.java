@@ -107,6 +107,33 @@ public interface Cliente {
                             @Header("profesor-login") String tock);
 
 
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"})
+    @DELETE("/practica/{id}")
+    Call <Void>borrarPractica(@Path("id") String id,
+                            @Header("profesor-login") String tock);
+
+
+
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"})
+    @GET("/practica/{id}")
+    Call<Practica>verPractica(@Path("id") String dni,
+                              @Header("profesor-login") String tock);
+
+
+
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"})
+    @PUT("/practica/{id}")
+    Call <Void>modificapractica(@Path("id") String id, @Body Practica practica,
+                              @Header("profesor-login") String tock);
+
+
+
 
 
 }

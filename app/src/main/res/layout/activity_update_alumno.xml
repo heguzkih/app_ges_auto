@@ -351,7 +351,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/botonUpdateAlumno"
+        android:id="@+id/botonUpdateAlumno12"
         android:layout_width="271dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
