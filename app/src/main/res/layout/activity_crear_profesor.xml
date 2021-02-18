@@ -8,19 +8,18 @@
     tools:context=".CrearProfesor">
 
 
-    <TableLayout
-        android:layout_width="317dp"
-        android:layout_height="589dp"
+    <ScrollView
+        android:layout_width="338dp"
+        android:layout_height="675dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textCreatePractica"
@@ -34,28 +33,16 @@
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal" >
-
             <CheckBox
                 android:id="@+id/ch_selector_rootCreate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Root" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+                android:text="@string/Root"
+                android:textSize="18sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edtnombre"
-                android:layout_width="286dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <EditText
@@ -68,14 +55,9 @@
                     android:ems="8"
                     android:hint="@string/nombre"
 
-                    android:inputType="textWebEditText" />
+                    android:inputType="textWebEditText"
+                    android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/primerapellido"
@@ -93,16 +75,10 @@
                     android:ems="8"
                     android:hint="@string/PrimerApellido"
 
-                    android:inputType="textWebEditText" />
+                    android:inputType="textWebEditText"
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/segapellido"
@@ -119,13 +95,9 @@
                     android:ems="8"
                     android:hint="@string/SegundoApellido"
 
-                    android:inputType="textWebEditText" />
+                    android:inputType="textWebEditText"
+                    android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edtdni"
@@ -141,15 +113,10 @@
                     android:layout_marginRight="5dp"
                     android:ems="8"
                     android:hint="@string/Dni"
-                    android:inputType="textWebEditText" />
+                    android:inputType="textWebEditText"
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edtpermisi"
@@ -166,15 +133,9 @@
                     android:ems="8"
                     android:hint="@string/permisos"
 
-                    android:inputType="textWebEditText" />
+                    android:inputType="textWebEditText"
+                    android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edtcontrasena"
@@ -191,15 +152,9 @@
                     android:ems="8"
                     android:hint="@string/contraseña"
 
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
 
             <Button
                 android:id="@+id/buttonCreatePractica"
@@ -208,10 +163,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
-                android:text="@string/CrearProfesor" />
-
-        </TableRow>
-
-    </TableLayout>
+                android:text="@string/CrearProfesor"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

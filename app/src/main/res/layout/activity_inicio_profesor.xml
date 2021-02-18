@@ -10,173 +10,172 @@
     android:rotationY="0"
     tools:context=".InicioProfesor">
 
-    <LinearLayout
-        android:layout_width="358dp"
-        android:layout_height="488dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:layout_width="318dp"
+        android:layout_height="697dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048">
-
-
-        <TextView
-            android:id="@+id/textnombreEtiqueta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/nombre"
-            android:textAlignment="gravity"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/textnombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/nombre"
-            android:textAlignment="center"
-
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/textprimerapellidoEtiqueta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/PrimerApellido"
-            android:textAlignment="gravity"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/textprimerapellido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/PrimerApellido"
-            android:textAlignment="center"
-
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/textsegundoapellidoetiqueta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/SegundoApellido"
-            android:textAlignment="gravity"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/textsegundoapellido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/SegundoApellido"
-            android:textAlignment="center"
-
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/textpermisosoetiqueta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/permisos"
-            android:textAlignment="gravity"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/textpermisoso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/permisos"
-            android:textAlignment="center"
-
-            android:textSize="24sp" />
-
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="91dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnProfesores"
-                android:layout_width="135.5dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30px"
-                android:layout_marginRight="15dp"
-
-                android:fontFamily="@font/allerta"
-                android:text="@string/Profesores"
-                android:textAlignment="center"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btnAlumnos"
-                android:layout_width="135.5dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30px"
-                android:layout_marginRight="15dp"
-                android:fontFamily="@font/allerta"
-                android:text="@string/Alumnos"
-                android:textAlignment="center"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/buttonPracticas"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30px"
-            android:layout_marginRight="15dp"
-            android:text="@string/Practicas" />
+            android:orientation="vertical">
 
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textnombreEtiqueta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/nombre"
+                android:textAlignment="gravity"
+                android:textSize="15sp" />
 
-    <ImageView
-        android:id="@+id/p_profesor_fondo"
-        android:layout_width="288dp"
-        android:layout_height="188dp"
-        android:contentDescription="@string/p_proofesor_fondo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903"
-        app:srcCompat="@drawable/p_profesor" />
+            <TextView
+                android:id="@+id/textnombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/nombre"
+                android:textAlignment="center"
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textprimerapellidoEtiqueta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/PrimerApellido"
+                android:textAlignment="gravity"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textprimerapellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/PrimerApellido"
+                android:textAlignment="center"
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textsegundoapellidoetiqueta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/SegundoApellido"
+                android:textAlignment="gravity"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textsegundoapellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/SegundoApellido"
+                android:textAlignment="center"
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textpermisosoetiqueta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/permisos"
+                android:textAlignment="gravity"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textpermisoso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/permisos"
+                android:textAlignment="center"
+
+                android:textSize="24sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnProfesores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30px"
+                    android:layout_marginRight="15dp"
+
+                    android:fontFamily="@font/allerta"
+                    android:text="@string/Profesores"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnAlumnos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30px"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/allerta"
+                    android:text="@string/Alumnos"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonPracticas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="15dp"
+                android:text="@string/Practicas" />
+
+            <ImageView
+                android:id="@+id/p_profesor_fondo"
+                android:layout_width="288dp"
+                android:layout_height="188dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/p_proofesor_fondo"
+                app:srcCompat="@drawable/p_profesor" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

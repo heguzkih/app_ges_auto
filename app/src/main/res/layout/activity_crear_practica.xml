@@ -7,19 +7,18 @@
     android:background="#2E7AA4"
     tools:context=".CrearPractica">
 
-    <TableLayout
-        android:layout_width="317dp"
-        android:layout_height="589dp"
+    <ScrollView
+        android:layout_width="341dp"
+        android:layout_height="647dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textCreatePractica"
@@ -33,17 +32,6 @@
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal" >
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edespiner"
-                android:layout_width="286dp"
-                android:layout_height="match_parent">
             <Spinner
                 android:id="@+id/spinnerAlmuno"
                 android:layout_width="match_parent"
@@ -52,19 +40,30 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
                 android:ems="8" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtpermisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/CreatepermisosPractica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="8"
+                    android:hint="@string/permisos"
+
+                    android:inputType="textWebEditText" />
             </com.google.android.material.textfield.TextInputLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edtnombre"
-                android:layout_width="286dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <EditText
                     android:id="@+id/CreareditTextDateinicio"
                     android:layout_width="match_parent"
@@ -79,12 +78,6 @@
 
 
             </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/primerapellido"
@@ -107,47 +100,15 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edtpermisi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/CreatepermisosPractica"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8"
-                    android:hint="@string/permisos"
-
-                    android:inputType="textWebEditText" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="183dp"
-            android:gravity="center_horizontal">
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/segapellido"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="189dp">
 
                 <EditText
                     android:id="@+id/editTextTextMultiLineComentario"
-                    android:layout_width="285dp"
-                    android:layout_height="165dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"
@@ -156,13 +117,6 @@
                     android:hint="@string/cmentarios"
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="129dp"
-            android:gravity="center_horizontal">
 
             <Button
                 android:id="@+id/buttonCreatePractica"
@@ -172,9 +126,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
                 android:text="@string/Crearpractica" />
-
-        </TableRow>
-
-    </TableLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

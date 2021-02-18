@@ -8,21 +8,18 @@
     tools:context=".deleteAlumno">
 
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="32dp"
+    <ScrollView
+        android:layout_width="331dp"
+        android:layout_height="556dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textUDeleteAlumno"
@@ -36,169 +33,91 @@
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Deleteedtnombre"
-                android:layout_width="286dp"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/DeleteNombreAlumno1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8"
-                    android:hint="@string/nombre"
-
-                    android:inputType="textWebEditText" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Deleteprimerapellido"
+            <TextView
+                android:id="@+id/DeleteNombreAlumno1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/nombre"
 
-                <TextView
-                    android:id="@+id/DeletePrimerApellidoAlumno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8"
-                    android:hint="@string/PrimerApellido"
+                android:inputType="textWebEditText"
+                android:textSize="18sp" />
 
-                    android:inputType="textWebEditText" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/segapellido"
+            <TextView
+                android:id="@+id/DeletePrimerApellidoAlumno"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/PrimerApellido"
 
-                <TextView
-                    android:id="@+id/DeleteSegundoApellidoAlumno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8"
-                    android:hint="@string/SegundoApellido"
+                android:inputType="textWebEditText"
+                android:textSize="18sp" />
 
-                    android:inputType="textWebEditText" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Deleteedtdni"
+            <TextView
+                android:id="@+id/DeleteSegundoApellidoAlumno"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/SegundoApellido"
 
-                <TextView
-                    android:id="@+id/DeletedniAlumno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8"
-                    android:hint="@string/Dni"
-                    android:inputType="textWebEditText" />
+                android:inputType="textWebEditText"
+                android:textSize="18sp" />
 
-            </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Deleteedtpermisi"
+            <TextView
+                android:id="@+id/DeletedniAlumno"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/Dni"
+                android:inputType="textWebEditText"
+                android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/DeletetepermisosAlumnouno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8"
-                    android:hint="@string/permisos"
+            <TextView
+                android:id="@+id/DeletetepermisosAlumnouno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/permisos"
 
-                    android:inputType="textWebEditText" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:inputType="textWebEditText"
+                android:textSize="18sp" />
 
-        </TableRow>
+            <TextView
+                android:id="@+id/DeletesexoAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/sexo"
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+                android:inputType="textWebEditText"
+                android:textSize="18sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Deleteteedsexo"
-                android:layout_width="286dp"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/DeletesexoAlumno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8"
-                    android:hint="@string/sexo"
-
-                    android:inputType="textWebEditText" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-
-    </TableLayout>
-
-    <Button
-        android:id="@+id/botonDeleteAlumno"
-        android:layout_width="271dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="500dp"
-        android:text="@string/Eliminar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+            <Button
+                android:id="@+id/botonDeleteAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/Eliminar" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#2E7AA4"
     android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="592dp"
+        android:layout_height="346dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textUDeletePractica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30px"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/Practica"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/DeletePracticaNombreAlumnotitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/Alumno"
+
+                android:inputType="textWebEditText"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DeletePracticaNombreAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/nombre"
+
+                android:inputType="textWebEditText" />
+
+            <TextView
+                android:id="@+id/DeletePracticadniAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/Dni"
+
+                android:inputType="textWebEditText" />
+
+            <TextView
+                android:id="@+id/DeletePracticaNombreProfesorTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/Profesor"
+
+                android:inputType="textWebEditText"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DeletePracticaNombreProfesor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/Profesor"
+
+                android:inputType="textWebEditText" />
+
+            <TextView
+                android:id="@+id/DeletePracticadniprofesor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/Dni"
+                android:inputType="textWebEditText" />
+
+            <TextView
+                android:id="@+id/deletePracticaInformacionitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/Informacio"
+
+                android:inputType="textWebEditText"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DeletePracticapermisosAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/permisos"
+
+                android:inputType="textWebEditText" />
+
+            <TextView
+                android:id="@+id/DeletePracticafechaIicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/fechaInicio"
+
+                android:inputType="textWebEditText" />
+
+            <TextView
+                android:id="@+id/DeletePracticafechafin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="8"
+                android:hint="@string/fechaFin"
+
+                android:inputType="textWebEditText" />
+
+            <Button
+                android:id="@+id/botonDeletePractica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="@string/Eliminar" />
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

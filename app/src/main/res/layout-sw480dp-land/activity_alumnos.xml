@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#2E7AA4"
     android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonCrearAlumno"
+        android:layout_width="576dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:text="@string/CrearAlumno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAlumno"
+        android:layout_width="585dp"
+        android:layout_height="285dp"
+        android:foregroundGravity="center_horizontal"
+        android:paddingLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCrearAlumno"
+        app:layout_constraintVertical_bias="0.363">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

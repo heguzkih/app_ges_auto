@@ -62,6 +62,7 @@ public class updateAlumno extends AppCompatActivity {
         nombre.setText(alumno.getNombre());
         primer_apellido.setText(alumno.getPrimer_apellido());
         segundo_apellido.setText(alumno.getSegundo_apellido());
+
         fecha_nacimiento.setText(formatter.format(alumno.getFecha_nacimiento()));
         centro_reconocimiento.setText(alumno.getCentro_reconocimiento());
         sexo.setText(alumno.getSexo());

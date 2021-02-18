@@ -41,20 +41,14 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edespiner"
-                android:layout_width="286dp"
-                android:layout_height="match_parent">
-
-                <Spinner
-                    android:id="@+id/spinnerAlmunoUpdate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                android:id="@+id/spinnerAlmunoUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:ems="8" />
 
         </TableRow>
 
@@ -63,20 +57,14 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edespinerprofesor"
-                android:layout_width="286dp"
-                android:layout_height="match_parent">
-
-                <Spinner
-                    android:id="@+id/spinnerProfesorUpdate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:ems="8" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                android:id="@+id/spinnerProfesorUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:ems="8" />
 
         </TableRow>
 
