@@ -8,19 +8,18 @@
     tools:context=".UpdatePractica">
 
 
-    <TableLayout
-        android:layout_width="331dp"
-        android:layout_height="635dp"
-        android:layout_marginTop="24dp"
+    <ScrollView
+        android:layout_width="366dp"
+        android:layout_height="653dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textUpdatePractica"
@@ -34,48 +33,27 @@
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
             <Spinner
                 android:id="@+id/spinnerAlmunoUpdate"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="39dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:ems="8" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
 
             <Spinner
                 android:id="@+id/spinnerProfesorUpdate"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:ems="8" />
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edtnombre"
-                android:layout_width="286dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <EditText
@@ -86,17 +64,10 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"
                     android:ems="8"
-                    android:hint="@string/fechaInicio"
-                     />
+                    android:hint="@string/fechaInicio" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/primerapellido"
@@ -113,18 +84,9 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"
                     android:ems="8"
-                    android:hint="@string/fechaFin"
-                   />
+                    android:hint="@string/fechaFin" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edtpermisi"
@@ -144,13 +106,6 @@
                     android:inputType="textWebEditText" />
             </com.google.android.material.textfield.TextInputLayout>
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="183dp"
-            android:gravity="center_horizontal">
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/segapellido"
                 android:layout_width="match_parent"
@@ -158,8 +113,8 @@
 
                 <EditText
                     android:id="@+id/UpdateeditTextTextMultiLineComentario"
-                    android:layout_width="285dp"
-                    android:layout_height="165dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"
@@ -168,13 +123,6 @@
                     android:hint="@string/cmentarios"
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="129dp"
-            android:gravity="center_horizontal">
 
             <Button
                 android:id="@+id/buttonUpdatePractica"
@@ -184,9 +132,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
                 android:text="@string/Modificar" />
-
-        </TableRow>
-
-    </TableLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

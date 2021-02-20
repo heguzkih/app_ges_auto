@@ -7,8 +7,8 @@
     android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_width="690dp"
-        android:layout_height="1503dp"
+        android:layout_width="672dp"
+        android:layout_height="1451dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
                 android:fontFamily="@font/allerta"
                 android:text="@string/nombre"
                 android:textAlignment="gravity"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textnombre"
@@ -43,7 +43,7 @@
                 android:text="@string/nombre"
                 android:textAlignment="center"
 
-                android:textSize="30sp" />
+                android:textSize="36sp" />
 
             <TextView
                 android:id="@+id/textprimerapellidoEtiqueta"
@@ -55,7 +55,7 @@
                 android:fontFamily="@font/allerta"
                 android:text="@string/PrimerApellido"
                 android:textAlignment="gravity"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textprimerapellido"
@@ -68,7 +68,7 @@
                 android:text="@string/PrimerApellido"
                 android:textAlignment="center"
 
-                android:textSize="30sp" />
+                android:textSize="36sp" />
 
             <TextView
                 android:id="@+id/textsegundoapellidoetiqueta"
@@ -80,7 +80,7 @@
                 android:fontFamily="@font/allerta"
                 android:text="@string/SegundoApellido"
                 android:textAlignment="gravity"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textsegundoapellido"
@@ -93,7 +93,7 @@
                 android:text="@string/SegundoApellido"
                 android:textAlignment="center"
 
-                android:textSize="30sp" />
+                android:textSize="36sp" />
 
             <TextView
                 android:id="@+id/textpermisosoetiqueta"
@@ -105,7 +105,7 @@
                 android:fontFamily="@font/allerta"
                 android:text="@string/permisos"
                 android:textAlignment="gravity"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textpermisoso"
@@ -118,7 +118,7 @@
                 android:text="@string/permisos"
                 android:textAlignment="center"
 
-                android:textSize="30sp" />
+                android:textSize="36sp" />
 
 
             <LinearLayout
@@ -139,7 +139,7 @@
                     android:gravity="center"
                     android:text="@string/Profesores"
                     android:textAlignment="center"
-                    android:textSize="30sp" />
+                    android:textSize="36sp" />
 
                 <Button
                     android:id="@+id/btnAlumnos"
@@ -152,7 +152,7 @@
                     android:gravity="center"
                     android:text="@string/Alumnos"
                     android:textAlignment="center"
-                    android:textSize="30sp" />
+                    android:textSize="36sp" />
             </LinearLayout>
 
             <Button
@@ -163,7 +163,7 @@
                 android:layout_marginTop="30px"
                 android:layout_marginRight="15dp"
                 android:text="@string/Practicas"
-                android:textSize="30sp" />
+                android:textSize="36sp" />
 
             <ImageView
                 android:id="@+id/p_profesor_fondo"
