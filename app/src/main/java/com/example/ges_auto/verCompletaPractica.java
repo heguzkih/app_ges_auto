@@ -50,9 +50,9 @@ public class verCompletaPractica extends AppCompatActivity {
         dniAlumno.setText(practica.getAlumno().getDni());
         nombreProfesor.setText(practica.getProfesor().getNombre()+ " "+practica.getProfesor().getPrimer_apellido()+
                 " "+practica.getProfesor().getSegundo_apellido());
-        fechaInicio.setText(formatter.format(practica.getFechaInicio()));
-        fechaFin.setText(formatter.format(practica.getFechaFin()));
-        permisoPractica.setText(practica.getPermiso());
+        fechaInicio.setText("F.Inicio: "+formatter.format(practica.getFechaInicio()));
+        fechaFin.setText("F.Inicio: "+formatter.format(practica.getFechaFin()));
+        permisoPractica.setText("Permiso: "+practica.getPermiso());
         dniProfesor.setText(practica.getProfesor().getDni());
         comentarios.setText(practica.getComentario());
 

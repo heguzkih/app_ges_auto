@@ -45,6 +45,6 @@
     <string name="cmentarios">Comentario</string>
     <string name="fechaInicio">Fecha Inicio  dd/mm/yyyy hh:mm</string>
     <string name="fechaFin">Fecha Fin  dd/mm/yyyy hh:mm</string>
-    <string name="Informacio">In formacion Adicional</string>
+    <string name="Informacio">Informacion Adicional</string>
 
 </resources>

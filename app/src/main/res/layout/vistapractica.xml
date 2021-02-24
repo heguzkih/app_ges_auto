@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="337dp"
+        android:layout_width="357dp"
         android:layout_height="285dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -24,19 +24,17 @@
             android:layout_height="wrap_content">
 
             <TableRow
-                android:layout_width="358dp"
+                android:layout_width="317dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
-                android:gravity="right">
+                android:gravity="center|right">
 
                 <TextView
                     android:id="@+id/texttituloParctica"
-                    android:layout_width="103dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="60dp"
                     android:gravity="center_horizontal"
                     android:text="@string/Practica" />
             </TableRow>
@@ -44,15 +42,14 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp">
+                android:gravity="center_horizontal">
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <TextView
@@ -64,7 +61,7 @@
 
                     <TextView
                         android:id="@+id/textalumnoapellidoPractica"
-                        android:layout_width="112dp"
+                        android:layout_width="93dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|left"
                         android:layout_marginTop="10dp"
@@ -73,7 +70,7 @@
 
                     <TextView
                         android:id="@+id/textnombrealumnoPractica"
-                        android:layout_width="97dp"
+                        android:layout_width="87dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_marginTop="10dp"
@@ -87,14 +84,12 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:gravity="left">
+                android:gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <TextView
@@ -107,7 +102,7 @@
 
                     <TextView
                         android:id="@+id/textpracticapermisos"
-                        android:layout_width="144dp"
+                        android:layout_width="124dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
@@ -121,14 +116,12 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:gravity="left">
+                android:gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <TextView
@@ -141,7 +134,7 @@
 
                     <TextView
                         android:id="@+id/textalumnoDniPractica"
-                        android:layout_width="193dp"
+                        android:layout_width="170dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
@@ -155,14 +148,12 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:gravity="left">
+                android:gravity="center_horizontal">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="286dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <TextView
@@ -190,12 +181,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="8dp"
                 android:gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <Button
@@ -225,7 +216,6 @@
                     android:id="@+id/buttonverpractica"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:text="@string/ver" />
             </TableRow>
 

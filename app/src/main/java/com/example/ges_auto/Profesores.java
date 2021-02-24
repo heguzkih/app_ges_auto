@@ -52,7 +52,7 @@ public class Profesores extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(),"creart profe",Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(),"creart profe",Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(getApplicationContext(),CrearProfesor.class);
 
@@ -112,7 +112,7 @@ public class Profesores extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(),"creart profe",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),"creart profe",Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(getApplicationContext(),CrearProfesor.class);
 
