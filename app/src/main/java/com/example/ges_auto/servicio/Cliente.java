@@ -19,6 +19,9 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
+/**
+ * genera las lllamadas en si
+ */
 public interface Cliente {
 
     @POST("/loguin")

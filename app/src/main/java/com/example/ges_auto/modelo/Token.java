@@ -1,5 +1,7 @@
 package com.example.ges_auto.modelo;
-
+/**
+ * modelo de datos para tconversion en POJO
+ */
 public class Token {
 
     String succes;

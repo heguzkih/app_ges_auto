@@ -12,6 +12,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import static preferencias.MisPreferencias.SHARED_PREFERENCES;
 
+        /**
+         * crea la conexion
+         * utilizamos el patron singelton para evitar  generar demasiadas llamadas
+         */
+
 public class RetrofitCliente {
 
     private static String BASE_URL;

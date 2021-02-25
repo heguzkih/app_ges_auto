@@ -5,7 +5,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.Date;
-
+/**
+ * modelo de datos para tconversion en POJO
+ */
 public class Practica implements Serializable {
 
 

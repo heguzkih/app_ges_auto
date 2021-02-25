@@ -7,6 +7,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * modelo de datos para tconversion en POJO
+ */
 public class Alumno implements Serializable {
 
 

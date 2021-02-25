@@ -25,6 +25,9 @@ import retrofit2.Response;
 
 import static preferencias.MisPreferencias.SHARED_PREFERENCES;
 
+/**
+ * carga las targetas en el reclicler
+ */
 public class Profesores extends AppCompatActivity {
 
     List <Profesor>  listaDatos;

@@ -18,6 +18,9 @@ import com.example.ges_auto.modelo.Profesor;
 import java.util.List;
 
 import preferencias.MisPreferencias;
+/**
+ * adaptador para la recicler generamso las distintas targetas
+ */
 
 public class AdaptadorReclicerProfesor extends RecyclerView.Adapter<AdaptadorReclicerProfesor.ViewHolderDatos>{
 
@@ -83,7 +86,9 @@ public class AdaptadorReclicerProfesor extends RecyclerView.Adapter<AdaptadorRec
                     context.startActivities(new Intent[]{intent});
                 }
             });
-
+            /**
+             * pasamos el profesor para su eliminacion a la clase que se necarga de ello
+             */
             eliminar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

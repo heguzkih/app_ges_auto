@@ -16,6 +16,9 @@ import com.example.ges_auto.modelo.Practica;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
+/**
+ * adaptador para la recicler generamso las distintas targetas
+ */
 
 public class AdaptadorReclicerPracticas extends RecyclerView.Adapter<AdaptadorReclicerPracticas.ViewHolderDatos>{
 

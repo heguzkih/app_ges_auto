@@ -26,7 +26,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static preferencias.MisPreferencias.SHARED_PREFERENCES;
-
+/**
+ * carga las targetas en el reclicler
+ */
 public class Practicas extends AppCompatActivity {
     Profesor profesor;
     List<Practica> listaDatos , listaDatosProfesor;

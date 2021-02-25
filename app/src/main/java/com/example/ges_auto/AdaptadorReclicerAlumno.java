@@ -19,6 +19,10 @@ import java.util.List;
 
 import preferencias.MisPreferencias;
 
+/**
+ * adaptador para la recicler generamso las distintas targetas
+ */
+
 public class AdaptadorReclicerAlumno extends RecyclerView.Adapter<AdaptadorReclicerAlumno.ViewHolderDatos>{
 
 

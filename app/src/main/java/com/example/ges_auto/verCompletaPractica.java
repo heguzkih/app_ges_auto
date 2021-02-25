@@ -11,6 +11,9 @@ import com.example.ges_auto.modelo.Practica;
 
 import java.text.SimpleDateFormat;
 
+/**
+ * ver los datos completos de la practica
+ */
 public class verCompletaPractica extends AppCompatActivity {
 
     TextView dniProfesor,nombreProfesor,nombreAlumno,dniAlumno, fechaInicio,fechaFin,
