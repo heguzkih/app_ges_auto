@@ -79,7 +79,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/veretePracticaNombreProfesor"
+                android:id="@+id/DvPracticaNombreProfesorTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -94,7 +94,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/DvPracticaNombreProfesorTitulo"
+                android:id="@+id/veretePracticaNombreProfesor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"

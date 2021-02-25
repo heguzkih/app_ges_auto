@@ -72,6 +72,7 @@ public class CrearAlumno extends AppCompatActivity {
                 alumno.setNacionalidad(nacionalidad.getText().toString().trim());
                 alumno.setDireccion(direccion.getText().toString().trim());
                 alumno.setCentro_reconocimiento(centro_reconocimiento.getText().toString().trim());
+                alumno.setPermiso_que_solicita(permiso_que_solicita.getText().toString().trim());
 
                 misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
 

@@ -16,7 +16,7 @@
         android:paddingLeft="16dp"
         android:text="@string/Crearpractica"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerAlumno"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,13 +25,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerpractica"
-        android:layout_width="1433dp"
-        android:layout_height="622dp"
+        android:layout_width="537dp"
+        android:layout_height="600dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="10dp"
         android:foregroundGravity="center_horizontal"
         android:paddingLeft="8dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

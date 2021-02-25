@@ -50,16 +50,16 @@ public class deleteProfesor extends AppCompatActivity {
 
        misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
 
-        dniProfesor.setText(profesor.getDni());
-        nombreProfesor.setText(profesor.getNombre());
-        apellidodosprofesor.setText(profesor.getSegundo_apellido());
-        apellidounoprofesor.setText(profesor.getPrimer_apellido());
-        permisosprofesor.setText(profesor.getPermisos().toString());
+        dniProfesor.setText(getText(R.string.Dni) +" "+profesor.getDni());
+        nombreProfesor.setText( getText(R.string.nombre)+" "+profesor.getNombre());
+        apellidodosprofesor.setText(getText(R.string.SegundoApellido )+" "+profesor.getSegundo_apellido());
+        apellidounoprofesor.setText(getText(R.string.PrimerApellido)+" "+profesor.getPrimer_apellido());
+        permisosprofesor.setText(getText(R.string.permisos) +" "+profesor.getPermisos().toString());
 
         eliminar = findViewById(R.id.buttonCreatePractica);
 
 
-        Toast.makeText(getApplicationContext(), "Al borrar Profesor se borraran todas sus parcticas", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), getText(R.string.mensadgeborradoprofesor), Toast.LENGTH_LONG).show();
 
         RetrofitCliente.setBaseUrl(misPreferencias.getServidor());
 
@@ -80,14 +80,14 @@ public class deleteProfesor extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Se borraran "+practiasBorrar.size()+"  practicas ", Toast.LENGTH_LONG).show();
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "Problemas en  carga datos practicas ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Problemas en carga datos practicas ", Toast.LENGTH_LONG).show();
                 }
 
             }
 
             @Override
             public void onFailure(Call<List<Practica>> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Problemas en  la Conexion ", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Problemas en la Conexión ", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -117,7 +117,7 @@ public class deleteProfesor extends AppCompatActivity {
 
                         @Override
                         public void onFailure(Call<Void> call, Throwable t) {
-                            Toast.makeText(getApplicationContext(), "Problemas en la conexion ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Problemas en la Conexión ", Toast.LENGTH_LONG).show();
 
                         }
                     });
@@ -147,7 +147,7 @@ public class deleteProfesor extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<Void> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(), "Problemas en  la Conexion ", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Problemas en  la Conexión ", Toast.LENGTH_LONG).show();
                     }
                 });
 

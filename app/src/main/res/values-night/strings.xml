@@ -35,7 +35,7 @@
     <string name="nacionalidad">Nacionalidad</string>
     <string name="lugarnaci">Lugar Ncaimiento</string>
     <string name="centrorec">Centro Reconocimiento</string>
-    <string name="sexo">Sexo</string>
+    <string name="sexo">Sexo:</string>
     <string name="fechadenacimiento">Fecha de Nacimiento</string>
     <string name="direccion">Direccion</string>
     <string name="Practicas">Practicas</string>
@@ -46,4 +46,8 @@
     <string name="cmentarios">Comentario</string>
     <string name="fechaInicio">Fecha Inicio  dd/mm/yyyy hh:mm</string>
     <string name="fechaFin">Fecha Fin  dd/mm/yyyy hh:mm</string>
+    <string name="Informacio">Informacion Adicional</string>
+    <string name="fechaIniciosin">Fecha Inicio:</string>
+    <string name="fechaFinsin">Fecha Fin: </string>
+    <string name="mensadgeborradoprofesor">Al borrar Profesor se borran todas sus prácticas</string>
 </resources>

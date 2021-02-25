@@ -53,15 +53,15 @@ public class deletePractica extends AppCompatActivity {
 
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy hh:mm");
 
-        nombreAlumno.setText(practica.getAlumno().getNombre() + " "+practica.getAlumno().getPrimer_apellido()+
+        nombreAlumno.setText(getString(R.string.nombre)+" "+practica.getAlumno().getNombre() + " "+practica.getAlumno().getPrimer_apellido()+
                                                     " "+practica.getAlumno().getSegundo_apellido());
-        dniAlumno.setText(practica.getAlumno().getDni());
-        nombreProfesor.setText(practica.getProfesor().getNombre()+ " "+practica.getProfesor().getPrimer_apellido()+
+        dniAlumno.setText(getString(R.string.dni) +" "+practica.getAlumno().getDni());
+        nombreProfesor.setText(getString(R.string.nombre) +" "+practica.getProfesor().getNombre()+ " "+practica.getProfesor().getPrimer_apellido()+
                 " "+practica.getProfesor().getSegundo_apellido());
-        fechaInicio.setText(formatter.format(practica.getFechaInicio()));
-        fechaFin.setText(formatter.format(practica.getFechaFin()));
-        permisoPractica.setText(practica.getPermiso());
-        dniProfesor.setText(practica.getProfesor().getDni());
+        fechaInicio.setText(getString(R.string.fechaIniciosin)+" "+formatter.format(practica.getFechaInicio()));
+        fechaFin.setText(getString(R.string.fechaFinsin) +" "+formatter.format(practica.getFechaFin()));
+        permisoPractica.setText(getString(R.string.permisos) +" "+practica.getPermiso());
+        dniProfesor.setText(getString(R.string.dni) +" "+practica.getProfesor().getDni());
 
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
 

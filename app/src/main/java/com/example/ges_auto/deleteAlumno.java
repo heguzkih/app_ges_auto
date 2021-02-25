@@ -44,18 +44,18 @@ public class deleteAlumno extends AppCompatActivity {
         nombre = findViewById(R.id.DeleteNombreAlumno1);
         primer_apellido = findViewById(R.id.DeletePrimerApellidoAlumno);
         segundo_apellido   = findViewById(R.id.DeleteSegundoApellidoAlumno);
-
+        permiso_que_solicita = findViewById(R.id.DeletetepermisosAlumnouno);
         sexo  = findViewById(R.id.DeletesexoAlumno);
-        permiso_que_solicita   = findViewById(R.id.DeletetepermisosAlumnouno);
+
 
         misPreferencias = MisPreferencias.getInstance(getSharedPreferences(SHARED_PREFERENCES,MODE_PRIVATE));
+        permiso_que_solicita.setText(getString(R.string.permisos)+" "+alumno.getPermiso_que_solicita());
+        dni.setText(getString(R.string.dni)+" "+alumno.getDni());
+        nombre.setText(getString(R.string.nombre)+" "+alumno.getNombre());
+        primer_apellido.setText(getString(R.string.PrimerApellido)+" "+alumno.getPrimer_apellido());
+        segundo_apellido.setText(getString(R.string.SegundoApellido)+" "+alumno.getSegundo_apellido());
+        sexo.setText(getString(R.string.sexo)+" "+alumno.getSexo());
 
-        dni.setText(alumno.getDni());
-        nombre.setText(alumno.getNombre());
-        primer_apellido.setText(alumno.getPrimer_apellido());
-        segundo_apellido.setText(alumno.getSegundo_apellido());
-        sexo.setText(alumno.getSexo());
-        permiso_que_solicita.setText(alumno.getPermiso_que_solicita());
 
 
         borrarAlumno = findViewById(R.id.botonDeleteAlumno);
@@ -118,7 +118,7 @@ public class deleteAlumno extends AppCompatActivity {
 
                         @Override
                         public void onFailure(Call<Void> call, Throwable t) {
-                            Toast.makeText(getApplicationContext(), "Problemas en la conexion ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Problemas en la conexión ", Toast.LENGTH_LONG).show();
 
                         }
                     });
@@ -147,7 +147,7 @@ public class deleteAlumno extends AppCompatActivity {
 
                         @Override
                         public void onFailure(Call<Void> call, Throwable t) {
-                            Toast.makeText(getApplicationContext(), "Problemas en la conexion ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Problemas en la conexión ", Toast.LENGTH_LONG).show();
                         }
                     });
 
